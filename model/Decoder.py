@@ -44,15 +44,15 @@ class DecoderRNN(nn.Module):
         Gready Search: for inference time
         `features`: (batch_size, embed_size) encoded image feature from Encoder model
         '''
-        sampled_ids = []
+        generated_seqs = []
         inputs = features.unsqueeze(1) # (batch_size, 1, embed_size)
         for i in range(max_seq_length):
             hiddens, states = self.lstm(inputs, states) # hiddens: (batch_size, 1, hidden_size)
             outputs = self.linear(hiddens.squeeze(1)) # outputs:  (batch_size, vocab_size)
             _, predicted = outputs.max(1) # predicted: (batch_size)
-            sampled_ids.append(predicted)
+            generated_seqs.append(predicted)
             inputs = self.word_embedding(predicted) # inputs: (batch_size, embed_size)
             inputs = inputs.unsqueeze(1) # inputs: (batch_size, 1, embed_size)
-        sampled_ids = torch.stack(sampled_ids, 1) # sampled_ids: (batch_size, max_seq_length)
+        generated_seqs = torch.stack(generated_seqs, 1) # generated_seqs: (batch_size, max_seq_length)
         
-        return sampled_ids
+        return generated_seqs
