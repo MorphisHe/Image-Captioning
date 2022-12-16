@@ -98,10 +98,9 @@ class Flickr30kConvRNN(Dataset):
             # lowercase, remove special chars
             tokens = caption.split()
             tokens = [token.lower() for token in tokens if token.isalnum()]
-            caption = ' '.join(tokens)
 
             # add start_seq and end_seq
-            caption = ' '.join([START_SEQ, caption, END_SEQ])
+            caption = [START_SEQ] + tokens + [END_SEQ]
             # encode to indices
             encoded_captions.append(self.vocab.encode_seq(caption))
 
