@@ -1,42 +1,26 @@
-import torch
-import deeplake
-
-class DatasetFromSubset(torch.utils.data.Dataset):
-    def __init__(self, subset, transform=None):
-        self.subset = subset
-        self.transform = transform
-
-    def __getitem__(self, index):
-        x, y = self.subset[index]
-        if self.transform:
-            x = self.transform(x)
-        return x, y
-
-    def __len__(self):
-        return len(self.subset)
+import os
+from torch.utils.data import random_split
 
 
-def get_flickr30k(trainset_ratio=0.8, train_bs=16, test_bs=128, transform_train=None, transform_test=None):
-    trainset = deeplake.load('hub://activeloop/flickr30k')
-    
+def get_data_split(image_dir, trainset_ratio=0.8):
+    # get image ids
+    image_ids = os.listdir(image_dir)
+    image_ids = [image_id for image_id in image_ids if ".jpg" in image_id]
+
     # compute train, dev, test size
-    train_size = int(trainset_ratio * len(trainset))
-    train_dev_size = len(trainset) - train_size
+    train_size = int(trainset_ratio * len(image_ids))
+    train_dev_size = len(image_ids) - train_size
     dev_size = int(0.5 * train_dev_size)
     test_size = train_dev_size - dev_size
 
-    # train, dev, test split
-    trainset, devset, testset = torch.utils.data.random_split(trainset, [train_size, devset, test_size])
+    # get split
+    train, dev, test = random_split(image_ids, [train_size, dev_size, test_size])
 
-    # create subset so that data transformation don't share across each split
-    trainset = DatasetFromSubset(trainset, transform=transform_train)
-    devset = DatasetFromSubset(devset, transform=transform_test)
-    testset = DatasetFromSubset(testset, transform=transform_test)
+    return train, dev, test
 
-    # create data loader
-    trainloader = torch.utils.data.DataLoader(trainset, batch_size=train_bs, shuffle=True)
-    devloader = torch.utils.data.DataLoader(devset, batch_size=test_bs, shuffle=False)
-    testloader = torch.utils.data.DataLoader(testset, batch_size=test_bs, shuffle=False)
 
-    return trainloader, devloader, testloader
 
+
+if __name__ == "__main__":
+    train, dev, test = get_data_split("data/flickr30k-images")
+    print(len(train), len(dev), len(test))
