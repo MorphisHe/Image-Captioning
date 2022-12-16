@@ -188,7 +188,7 @@ class Trainer:
                 test_loss += loss.item()
 
             # greedy search
-            max_seq_length = torch.max(lengths)
+            max_seq_length = max(lengths)
             generated_seqs = self.model.decoder.generate_sequence(img_feats, max_seq_length=max_seq_length)
             generated_seqs = generated_seqs.cpu().numpy().astype(int).tolist()
             end_seq_val = vocab.word2idx[END_SEQ]
@@ -245,7 +245,7 @@ class Trainer:
                 test_loss += loss.item()
 
             # greedy search
-            max_seq_length = torch.max(lengths)
+            max_seq_length = max(lengths)
             generated_seqs = self.model.decoder.generate_sequence(img_feats, max_seq_length=max_seq_length)
             generated_seqs = generated_seqs.cpu().numpy().astype(int).tolist()
             end_seq_val = vocab.word2idx[END_SEQ]
