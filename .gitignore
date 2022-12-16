@@ -1,0 +1,5 @@
+data/
+.DS_Store
+.python-version
+proposal.pdf
+test.py
