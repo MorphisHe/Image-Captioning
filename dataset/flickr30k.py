@@ -126,7 +126,7 @@ class BatchCollateFn:
         lengths = [] # actual length of each captions before padding
         for d in data:
             for image in d["images"]:
-                images.append(torch.permute(image, (1, 2, 0)).unsqueeze(dim=0)) # after torch.resize shape=(C,H,W) change to (H,W,C)
+                images.append(image.unsqueeze(dim=0)) # after torch.resize shape=(C,H,W) change to (H,W,C)
             for caption in d["captions"]:
                 lengths.append(len(caption))
         images = torch.vstack(images) # convert to tensor
