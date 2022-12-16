@@ -33,7 +33,7 @@ def get_configs():
         "lr": 0.01,
         "type": "Adam",
         "kwargs": {
-            "weight_decay": 0.1,
+            "weight_decay": 0,
             "amsgrad": True
         }
     }
