@@ -4,14 +4,14 @@ import torchvision.models as models
 
 class EncoderCNN(nn.Module):
     # code from: https://github.com/tatwan/image-captioning-pytorch/blob/main/model.py with modification
-    def __init__(self, embed_size, freeze=False):
+    def __init__(self, embed_size, freeze_cnn=False):
         super(EncoderCNN, self).__init__()
         
         # pretrained model resnet50
         resnet = models.resnet50(pretrained=True) # ResNet: RGB order with pixels in [0, 1]
         
         # freeze cnn layer or not
-        if freeze:
+        if freeze_cnn:
             for param in resnet.parameters():
                 param.requires_grad_(False)
         
