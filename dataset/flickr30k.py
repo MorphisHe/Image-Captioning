@@ -5,7 +5,7 @@ import pandas as pd
 from PIL import Image
 import torch
 from torch.utils.data import Dataset
-from .enums import UNK_WORD, START_SEQ, END_SEQ
+from .enums import UNK_WORD, START_SEQ, END_SEQ, PAD
 
 
 
@@ -13,7 +13,7 @@ class Vocabulary:
     """class to convert word to index"""
     def __init__(self):
         # add unk, start_seq, and end_seq to vocab
-        self.word2idx = {UNK_WORD: 0, START_SEQ: 1, END_SEQ: 2}
+        self.word2idx = {PAD:0, UNK_WORD: 1, START_SEQ: 2, END_SEQ: 3}
         self.idx2word = {v:k for k,v in self.word2idx.items()}
         self.idx = 3
     
