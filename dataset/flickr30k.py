@@ -138,9 +138,6 @@ class BatchCollateFn:
                 length = lengths[i]
                 captions[i, :length] = torch.tensor(caption, dtype=torch.long)
                 i += 1
-        
-        # convert to tensor
-        lengths = torch.tensor(lengths, dtype=torch.long)
 
         return images, captions, lengths
         

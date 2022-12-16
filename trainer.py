@@ -56,7 +56,7 @@ class Trainer:
         self.total_train_batch = len(self.train_dataloader)
         self.total_test_batch = len(self.test_dataloader)
         self.total_dev_batch = len(self.dev_dataloader)
-        self.ten_percent_train_batch = self.total_train_batch // 10 # use to log step loss
+        self.ten_percent_train_batch = max(self.total_train_batch // 10, 1) # use to log step loss
         self.logger.log_block(f"Training Dataset Size: {len(self.train_dataloader.dataset)}")
         self.logger.log_message(f"Training Dataset Total Batch#: {self.total_train_batch}")
         self.logger.log_block(f"Dev Dataset Size: {len(self.dev_dataloader.dataset)}")
@@ -130,7 +130,7 @@ class Trainer:
         start_time = time.time()
         
         for batch_idx, (images, captions, lengths) in enumerate(self.train_dataloader):
-            images, captions, lengths = images.to(self.device), captions.to(self.device), lengths.to(self.device)
+            images, captions, lengths = images.to(self.device), captions.to(self.device), lengths
             loss = self.train_one_step(images, captions, lengths)
             epoch_loss += loss
             ten_percent_batch_loss += loss
@@ -178,7 +178,7 @@ class Trainer:
                     captions_decoded.append(decoded_caption)
 
                 # get prediction   
-                images, captions, lengths = images.to(self.device), captions.to(self.device), lengths.to(self.device)
+                images, captions, lengths = images.to(self.device), captions.to(self.device), lengths
                 img_feats = self.model.encoder(images)
                 outputs = self.model.decoder(img_feats, captions, lengths)
                 loss = self.criterion(
