@@ -1,4 +1,7 @@
-data/
+data/flickr30k-images-full
+data/flickr30k-images.tar.gz
+data/flickr30k.tar.gz
+data/flickr30k
 .DS_Store
 .python-version
 proposal.pdf
