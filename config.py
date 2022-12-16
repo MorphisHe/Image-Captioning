@@ -10,7 +10,7 @@ def get_configs():
         "test_bs": 256,
         "first_caption_only": False,
         "image_dir": "data/flickr30k-images/",
-        "label_path": "results.csv"
+        "label_path": "data/results.csv"
     }
 
     encoder_params = {
