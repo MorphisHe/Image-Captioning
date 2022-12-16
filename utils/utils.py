@@ -3,8 +3,8 @@ sys.path.append("../")
 
 import os
 import pandas as pd
-from torch.utils.data import random_split
-from dataset.flickr30k import Vocabulary
+from torch.utils.data import random_split, DataLoader
+from dataset.flickr30k import Vocabulary, Flickr30kConvRNN, BatchCollateFn
 
 
 def get_data_split(image_dir, trainset_ratio=0.8):
@@ -21,7 +21,7 @@ def get_data_split(image_dir, trainset_ratio=0.8):
     # get split
     train, dev, test = random_split(image_ids, [train_size, dev_size, test_size])
 
-    return train, dev, test
+    return list(train), list(dev), list(test)
 
 
 def get_vocabulary(label_path):
@@ -32,8 +32,6 @@ def get_vocabulary(label_path):
     records = df.to_dict("record")
     for record in records:
         # lowercase, remove special chars
-        print(record["image_name"])
-        print(record[" comment"])
         caption = record[" comment"].strip()
         tokens = caption.split()
         tokens = [token.lower() for token in tokens if token.isalnum()]
@@ -45,7 +43,46 @@ def get_vocabulary(label_path):
     return vocab
 
 
-#def get_dataloader()
+def get_dataloader(train_ids, dev_ids, test_ids, 
+                   image_dir, label_path, vocab, 
+                   first_caption_only, train_bs, 
+                   test_bs, transform_train, transform_test):
+    # create dataset
+    train_ds = Flickr30kConvRNN(
+        image_dir=image_dir,
+        image_ids=train_ids,
+        label_path=label_path,
+        transform=transform_train,
+        vocab=vocab,
+        first_caption_only=first_caption_only
+    )
+    dev_ds = Flickr30kConvRNN(
+        image_dir=image_dir,
+        image_ids=dev_ids,
+        label_path=label_path,
+        transform=transform_test,
+        vocab=vocab,
+        first_caption_only=first_caption_only
+    )
+    test_ds = Flickr30kConvRNN(
+        image_dir=image_dir,
+        image_ids=test_ids,
+        label_path=label_path,
+        transform=transform_test,
+        vocab=vocab,
+        first_caption_only=first_caption_only
+    )
+    
+    # create batch collate function
+    collate_fn = BatchCollateFn()
+
+    # create dataloaders
+    train_dataloader = DataLoader(train_ds, batch_size=train_bs, shuffle=True, collate_fn=collate_fn)
+    dev_dataloader = DataLoader(dev_ds, batch_size=test_bs, shuffle=False, collate_fn=collate_fn)
+    test_dataloader = DataLoader(test_ds, batch_size=test_bs, shuffle=False, collate_fn=collate_fn)
+
+    return train_dataloader, dev_dataloader, test_dataloader
+
 
 
 
