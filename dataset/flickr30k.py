@@ -15,7 +15,7 @@ class Vocabulary:
         # add unk, start_seq, and end_seq to vocab
         self.word2idx = {PAD:0, UNK_WORD: 1, START_SEQ: 2, END_SEQ: 3}
         self.idx2word = {v:k for k,v in self.word2idx.items()}
-        self.idx = 3
+        self.idx = 4
     
     def add_word(self, word):
         if word not in self.word2idx:
@@ -123,23 +123,22 @@ class BatchCollateFn:
         '''
         images = []
         lengths = [] # actual length of each captions before padding
-        for d in data:
-            for image in d["images"]:
+        captions = []
+        for batch in data:
+            for image in batch["images"]:
                 images.append(image.unsqueeze(dim=0)) # after torch.resize shape=(C,H,W) change to (H,W,C)
-            for caption in d["captions"]:
+            for caption in batch["captions"]:
+                captions.append(caption)
                 lengths.append(len(caption))
         images = torch.vstack(images) # convert to tensor
 
         # pad each caption
-        captions = torch.zeros(len(lengths), max(lengths)).long()
-        i = 0
-        for d in data:
-            for caption in d["captions"]:
-                length = lengths[i]
-                captions[i, :length] = torch.tensor(caption, dtype=torch.long)
-                i += 1
+        captions_padded = torch.zeros(len(lengths), max(lengths)).long()
+        for i, caption in enumerate(captions):
+            length = lengths[i]
+            captions_padded[i, :length] = torch.tensor(caption, dtype=torch.long)
 
-        return images, captions, lengths
+        return images, captions_padded, lengths
         
 
 
