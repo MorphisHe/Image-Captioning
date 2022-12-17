@@ -6,3 +6,5 @@ data/flickr30k
 .python-version
 proposal.pdf
 test.py
+data/flickr8k/images
+*.zip

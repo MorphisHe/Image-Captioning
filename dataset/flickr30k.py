@@ -1,6 +1,7 @@
 import os
 from collections import defaultdict
 
+import re
 import pandas as pd
 from PIL import Image
 import torch
@@ -57,7 +58,6 @@ class Flickr30kConvRNN(Dataset):
         `transform`: torch image transformation
         `vocab`: Vocabulary object to encode captions
         `first_caption_only`: only only first of the five captions
-        `padding_length`: len
         '''
         self.first_caption_only = first_caption_only
         self.transform = transform
@@ -97,7 +97,8 @@ class Flickr30kConvRNN(Dataset):
         for i, caption in enumerate(captions):
             # lowercase, remove special chars
             tokens = caption.split()
-            tokens = [token.lower() for token in tokens if token.isalnum()]
+            tokens = [re.sub(r'[^a-zA-Z0-9]', '', token.lower()) for token in tokens if token.isalnum()]
+            tokens = [token for token in tokens if len(token)] # remove empty token
 
             # add start_seq and end_seq
             caption = [START_SEQ] + tokens + [END_SEQ]
