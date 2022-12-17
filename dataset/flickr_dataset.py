@@ -50,7 +50,8 @@ class Vocabulary:
 class FlickrConvRNN(Dataset):
     def __init__(self, image_dir, image_ids, 
                  label_path, transform=None, 
-                 vocab=None, first_caption_only=False):
+                 vocab=None, delimiter="|",
+                 first_caption_only=False):
         '''
         `image_dir`: dir that stores all images
         `image_ids`: list of image ids from a data split
@@ -58,6 +59,7 @@ class FlickrConvRNN(Dataset):
         `transform`: torch image transformation
         `vocab`: Vocabulary object to encode captions
         `first_caption_only`: only only first of the five captions
+        `delimiter`: delimiter for your label csv file. `|` for flickr30k, `,` for flickr8k
         '''
         self.first_caption_only = first_caption_only
         self.transform = transform
@@ -66,7 +68,7 @@ class FlickrConvRNN(Dataset):
         self.image_ids = image_ids
         
         # get labels that belong to this dataset
-        df = pd.read_csv(label_path, delimiter="|")
+        df = pd.read_csv(label_path, delimiter=delimiter)
         df = df[df["image_name"].isin(self.image_ids)]
         records = df.to_dict("record")
         self.labels = defaultdict(list)

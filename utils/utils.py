@@ -4,7 +4,7 @@ sys.path.append("../")
 import os
 import pandas as pd
 from torch.utils.data import random_split, DataLoader
-from dataset.flickr30k import Vocabulary, Flickr30kConvRNN, BatchCollateFn
+from dataset.flickr_dataset import Vocabulary, FlickrConvRNN, BatchCollateFn
 
 
 def get_data_split(image_dir, trainset_ratio=0.8):
@@ -46,31 +46,35 @@ def get_vocabulary(label_path):
 def get_dataloader(train_ids, dev_ids, test_ids, 
                    image_dir, label_path, vocab, 
                    first_caption_only, train_bs, 
-                   test_bs, transform_train, transform_test):
+                   test_bs, delimiter,
+                   transform_train, transform_test):
     # create dataset
-    train_ds = Flickr30kConvRNN(
+    train_ds = FlickrConvRNN(
         image_dir=image_dir,
         image_ids=train_ids,
         label_path=label_path,
         transform=transform_train,
         vocab=vocab,
-        first_caption_only=first_caption_only
+        first_caption_only=first_caption_only,
+        delimiter= delimiter
     )
-    dev_ds = Flickr30kConvRNN(
+    dev_ds = FlickrConvRNN(
         image_dir=image_dir,
         image_ids=dev_ids,
         label_path=label_path,
         transform=transform_test,
         vocab=vocab,
-        first_caption_only=first_caption_only
+        first_caption_only=first_caption_only,
+        delimiter= delimiter
     )
-    test_ds = Flickr30kConvRNN(
+    test_ds = FlickrConvRNN(
         image_dir=image_dir,
         image_ids=test_ids,
         label_path=label_path,
         transform=transform_test,
         vocab=vocab,
-        first_caption_only=first_caption_only
+        first_caption_only=first_caption_only,
+        delimiter= delimiter
     )
     
     # create batch collate function
