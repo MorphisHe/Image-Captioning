@@ -48,8 +48,8 @@ class Vocabulary:
 
 class Flickr30kConvRNN(Dataset):
     def __init__(self, image_dir, image_ids, 
-                 label_path, transform=None, vocab=None, 
-                 first_caption_only=False, padding_length=0):
+                 label_path, transform=None, 
+                 vocab=None, first_caption_only=False):
         '''
         `image_dir`: dir that stores all images
         `image_ids`: list of image ids from a data split
