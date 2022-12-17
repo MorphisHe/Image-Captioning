@@ -6,7 +6,7 @@ import numpy as np
 
 from utils.logger import Logger
 from utils.callbacks import EarlyStopping
-from dataset.enums import END_SEQ
+from dataset.enums import END_SEQ, START_SEQ
 
 import math
 import nltk
@@ -200,7 +200,7 @@ class Trainer:
                     generated_seq = encoded_caption[:end_seq_idx]
                     if not len(generated_seq):
                         # if generated empty sequence, append a end_seq to it
-                        generated_seq = [end_seq_val]
+                        generated_seq = [vocab.word2idx[START_SEQ]]
                     decoded_gen_seq = vocab.decode_seq(generated_seq)
                     prediction_decoded.append(decoded_gen_seq)
         
@@ -260,7 +260,7 @@ class Trainer:
                     generated_seq = encoded_caption[:end_seq_idx]
                     if not len(generated_seq):
                         # if generated empty sequence, append a end_seq to it
-                        generated_seq = [end_seq_val]
+                        generated_seq = [vocab.word2idx[START_SEQ]]
                     decoded_gen_seq = vocab.decode_seq(generated_seq)
                     prediction_decoded.append(decoded_gen_seq)
         
