@@ -6,9 +6,9 @@ def get_configs():
     }
 
     dataset_params = {
-        "train_bs": 16,
+        "train_bs": 32,
         "test_bs": 100,
-        "first_caption_only": False,
+        "first_caption_only": True,
         "image_dir": "data/flickr8k/images/",
         "label_path": "data/flickr8k/results.csv",
         "delimiter": ","
@@ -16,7 +16,7 @@ def get_configs():
 
     encoder_params = {
         "embed_size": 256,
-        "freeze_cnn": False
+        "freeze_cnn": True
     }
 
     decoder_params = {
