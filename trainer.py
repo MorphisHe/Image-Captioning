@@ -169,7 +169,7 @@ class Trainer:
         with torch.no_grad():
             captions_decoded = []
             prediction_decoded = []
-            for images, captions, lengths in self.dev_dataloader:
+            for images, captions, lengths in tqdm(self.dev_dataloader, desc="Eval Devset"):
                 # decode ground truth captions
                 for caption in captions:
                     encoded_caption = caption.cpu().numpy().astype(int).tolist()
@@ -229,7 +229,7 @@ class Trainer:
         with torch.no_grad():
             captions_decoded = []
             prediction_decoded = []
-            for images, captions, lengths in self.test_dataloader:
+            for images, captions, lengths in tqdm(self.test_dataloader, desc="Eval Testset"):
                 # decode ground truth captions
                 for caption in captions:
                     encoded_caption = caption.cpu().numpy().astype(int).tolist()
