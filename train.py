@@ -13,15 +13,15 @@ def get_train_test_trans():
     transform_train = transforms.Compose([
         transforms.ToTensor(),
         transforms.Resize((224, 224)),
-        #transforms.RandomCrop(32, padding=4),
-        #transforms.RandomHorizontalFlip(),
-        #transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
+        transforms.RandomCrop(32, padding=4),
+        transforms.RandomHorizontalFlip(),
+        transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
     ])
 
     transform_test = transforms.Compose([
         transforms.ToTensor(),
         transforms.Resize((224, 224)),
-        #transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
+        transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
     ])
 
     return transform_train, transform_test
@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     # get dataloaders
     train_ids, dev_ids, test_ids = get_data_split(dataset_params["image_dir"])
-    vocab = get_vocabulary(dataset_params["label_path"])
+    vocab = get_vocabulary(dataset_params["label_path"], dataset_params["delimiter"])
     train_dataloader, dev_dataloader, test_dataloader = get_dataloader(
         train_ids, dev_ids, test_ids, **dataset_params, vocab=vocab,
         transform_train=transform_train, transform_test=transform_test

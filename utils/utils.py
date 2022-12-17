@@ -24,11 +24,11 @@ def get_data_split(image_dir, trainset_ratio=0.8):
     return list(train), list(dev), list(test)
 
 
-def get_vocabulary(label_path):
+def get_vocabulary(label_path, delimiter):
     vocab = Vocabulary()
 
     # get labels that belong to this dataset
-    df = pd.read_csv(label_path, delimiter="|")
+    df = pd.read_csv(label_path, delimiter=delimiter)
     records = df.to_dict("record")
     for record in records:
         # lowercase, remove special chars
