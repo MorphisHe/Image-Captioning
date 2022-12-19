@@ -6,7 +6,7 @@ import re
 import pandas as pd
 from torch.utils.data import random_split, DataLoader
 from dataset.flickr_dataset import Vocabulary, FlickrConvRNN, BatchCollateFn
-
+from collections import defaultdict
 
 def get_data_split(image_dir, trainset_ratio=0.8):
     # get image ids
@@ -31,6 +31,7 @@ def get_vocabulary(label_path, delimiter):
     # get labels that belong to this dataset
     df = pd.read_csv(label_path, delimiter=delimiter)
     records = df.to_dict("record")
+    token_counts = defaultdict(int)
     for record in records:
         # lowercase, remove special chars
         caption = record[" comment"].strip()
@@ -40,6 +41,10 @@ def get_vocabulary(label_path, delimiter):
         
         # add to vocab
         for token in tokens:
+            token_counts[token] += 1
+    
+    for token, count in token_counts.items():
+        if count >= 5:
             vocab.add_word(token)
     
     return vocab
