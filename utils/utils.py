@@ -2,6 +2,7 @@ import sys
 sys.path.append("../")
 
 import os
+import re
 import pandas as pd
 from torch.utils.data import random_split, DataLoader
 from dataset.flickr_dataset import Vocabulary, FlickrConvRNN, BatchCollateFn
@@ -34,7 +35,8 @@ def get_vocabulary(label_path, delimiter):
         # lowercase, remove special chars
         caption = record[" comment"].strip()
         tokens = caption.split()
-        tokens = [token.lower() for token in tokens if token.isalnum()]
+        tokens = [re.sub(r'[^a-zA-Z0-9]', '', token.lower()) for token in tokens if token.isalnum()]
+        tokens = [token for token in tokens if len(token)] # remove empty token
         
         # add to vocab
         for token in tokens:
