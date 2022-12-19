@@ -6,7 +6,6 @@ import numpy as np
 
 from utils.logger import Logger
 from utils.callbacks import EarlyStopping
-from utils.utils import eval_image_captioning
 from dataset.enums import END_SEQ, START_SEQ
 
 from utils.coco_eval import Scorer
