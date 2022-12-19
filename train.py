@@ -13,15 +13,15 @@ def get_train_test_trans():
     transform_train = transforms.Compose([
         transforms.ToTensor(),
         transforms.Resize((224, 224)),
-        transforms.RandomCrop(32, padding=4),
-        transforms.RandomHorizontalFlip(),
-        transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
+        #transforms.RandomCrop(32, padding=4),
+        #transforms.RandomHorizontalFlip(),
+        #transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
     ])
 
     transform_test = transforms.Compose([
         transforms.ToTensor(),
         transforms.Resize((224, 224)),
-        transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
+        #transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
     ])
 
     return transform_train, transform_test

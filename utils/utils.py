@@ -7,6 +7,10 @@ import pandas as pd
 from torch.utils.data import random_split, DataLoader
 from dataset.flickr_dataset import Vocabulary, FlickrConvRNN, BatchCollateFn
 
+import nltk
+from rouge import Rouge
+from nltk.translate.meteor_score import meteor_score
+
 
 def get_data_split(image_dir, trainset_ratio=0.8):
     # get image ids
@@ -88,6 +92,32 @@ def get_dataloader(train_ids, dev_ids, test_ids,
     test_dataloader = DataLoader(test_ds, batch_size=test_bs, shuffle=False, collate_fn=collate_fn)
 
     return train_dataloader, dev_dataloader, test_dataloader
+
+
+def eval_image_captioning(captions_decoded, prediction_decoded):
+    """
+    captions_decoded in the form of [[list values of str],[...],...]
+    prediction_decoded in the form of [[list values of str],[...],...]
+    """
+    bleu_score_1 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(1.0, 0.0, 0.0, 0.0))
+    bleu_score_2 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.5, 0.5, 0.0, 0.0))
+    bleu_score_3 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.33, 0.33, 0.33, 0.0))
+    bleu_score_4 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.25, 0.25, 0.25, 0.25))
+    rouge = Rouge()
+
+    rouge_scores = []
+    meteor_scores = []
+    for reference, candidate in zip(captions_decoded, prediction_decoded):
+        score1 = rouge.get_scores(reference[0], candidate[0])[0]['rouge-l']['f']
+        rouge_scores.append(score1)
+
+        score2 = meteor_score(reference[0], candidate[0])
+        meteor_scores.append(score2)
+
+    ROUGE_L = sum(rouge_scores) / len(rouge_scores)
+    METEOR = sum(meteor_scores) / len(meteor_scores)
+
+    return bleu_score_1, bleu_score_2, bleu_score_3, bleu_score_4, ROUGE_L, METEOR
 
 
 
