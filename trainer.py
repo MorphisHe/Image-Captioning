@@ -9,8 +9,7 @@ from utils.callbacks import EarlyStopping
 from utils.utils import eval_image_captioning
 from dataset.enums import END_SEQ, START_SEQ
 
-import math
-import torch
+from utils.coco_eval import Scorer
 
 
 class Trainer:
@@ -30,6 +29,9 @@ class Trainer:
 
         self.max_epochs = train_params["max_epoch"]
         self.device = train_params["device"]
+
+        # init scorer
+        self.scorer = Scorer()
 
         # init logger
         self.logger = Logger(self.output_dir)
@@ -179,7 +181,7 @@ class Trainer:
                     encoded_caption = caption.cpu().numpy().astype(int).tolist()
                     encoded_caption = encoded_caption[:length]
                     decoded_caption = vocab.decode_seq(encoded_caption)
-                    captions_decoded.append([decoded_caption])
+                    captions_decoded.append(decoded_caption)
 
                 # get prediction   
                 images, captions, lengths = images.to(self.device), captions.to(self.device), lengths
@@ -211,12 +213,13 @@ class Trainer:
                     prediction_decoded.append(decoded_gen_seq)
         
         # eval metrics
-        bleu_score_1, bleu_score_2, bleu_score_3, bleu_score_4, ROUGE_L, METEOR = eval_image_captioning(captions_decoded, prediction_decoded)
+        scores = self.scorer.compute_scores(captions_decoded, prediction_decoded)
+        bleu_score_1, bleu_score_2, bleu_score_3, bleu_score_4, ROUGE_L, METEOR, CIDEr, SPICE = scores
 
         end_time = time.time()
         avg_loss = test_loss/self.total_test_batch
         epoch_time = (end_time-start_time)/60
-        self.logger.log_message(f"Eval Devset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU-1: {bleu_score_1:.5f} - BLEU-2: {bleu_score_2:.5f} - BLEU-3: {bleu_score_3:.5f} - BLEU-4: {bleu_score_4:.5f} - ROUGE_L:{ ROUGE_L:.5f} - METEOR:{METEOR:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
+        self.logger.log_message(f"Eval Devset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU-1: {bleu_score_1:.5f} - BLEU-2: {bleu_score_2:.5f} - BLEU-3: {bleu_score_3:.5f} - BLEU-4: {bleu_score_4:.5f} - ROUGE_L: {ROUGE_L:.5f} - METEOR: {METEOR:.5f} - CIDEr: {CIDEr:.5f} - SPICE: {SPICE:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
 
         # saving best model and early stopping
         if not self.callbacks(self.model, bleu_score_4):
@@ -241,7 +244,7 @@ class Trainer:
                     encoded_caption = caption.cpu().numpy().astype(int).tolist()
                     encoded_caption = encoded_caption[:length]
                     decoded_caption = vocab.decode_seq(encoded_caption)
-                    captions_decoded.append([decoded_caption])
+                    captions_decoded.append(decoded_caption)
 
                 # get prediction   
                 images, captions, lengths = images.to(self.device), captions.to(self.device), lengths
@@ -273,9 +276,10 @@ class Trainer:
                     prediction_decoded.append(decoded_gen_seq)
         
         # eval metrics
-        bleu_score_1, bleu_score_2, bleu_score_3, bleu_score_4, ROUGE_L, METEOR = eval_image_captioning(captions_decoded, prediction_decoded)
+        scores = self.scorer.compute_scores(captions_decoded, prediction_decoded)
+        bleu_score_1, bleu_score_2, bleu_score_3, bleu_score_4, ROUGE_L, METEOR, CIDEr, SPICE = scores
 
         end_time = time.time()
         avg_loss = test_loss/self.total_test_batch
         epoch_time = (end_time-start_time)/60
-        self.logger.log_message(f"Test Testset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU-1: {bleu_score_1:.5f} - BLEU-2: {bleu_score_2:.5f} - BLEU-3: {bleu_score_3:.5f} - BLEU-4: {bleu_score_4:.5f} - ROUGE_L:{ ROUGE_L:.5f} - METEOR:{METEOR:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
+        self.logger.log_message(f"Test Testset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU-1: {bleu_score_1:.5f} - BLEU-2: {bleu_score_2:.5f} - BLEU-3: {bleu_score_3:.5f} - BLEU-4: {bleu_score_4:.5f} - ROUGE_L: {ROUGE_L:.5f} - METEOR: {METEOR:.5f} - CIDEr: {CIDEr:.5f} - SPICE: {SPICE:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
