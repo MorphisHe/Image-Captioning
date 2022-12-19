@@ -211,15 +211,19 @@ class Trainer:
                     prediction_decoded.append(decoded_gen_seq)
         
         # compute bleu score
-        bleu_score = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.33, 0.33, 0.33, 0.0))
+        bleu_score_1 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(1.0, 0.0, 0.0, 0.0))
+        bleu_score_2 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.5, 0.5, 0.0, 0.0))
+        bleu_score_3 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.33, 0.33, 0.33, 0.0))
+        bleu_score_4 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.25, 0.25, 0.25, 0.25))
+
 
         end_time = time.time()
         avg_loss = test_loss/self.total_test_batch
         epoch_time = (end_time-start_time)/60
-        self.logger.log_message(f"Eval Devset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU Score: {bleu_score:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
+        self.logger.log_message(f"Eval Devset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU-1: {bleu_score_1:.5f} - BLEU-2: {bleu_score_2:.5f} - BLEU-3: {bleu_score_3:.5f} - BLEU-4: {bleu_score_4:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
 
         # saving best model and early stopping
-        if not self.callbacks(self.model, bleu_score):
+        if not self.callbacks(self.model, bleu_score_4):
             self.eval_best_model_on_testdataset()
             exit(1)
 
@@ -282,9 +286,12 @@ class Trainer:
                     prediction_decoded.append(decoded_gen_seq)
         
         # compute bleu score
-        bleu_score = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.33, 0.33, 0.33, 0.0))
+        bleu_score_1 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(1.0, 0.0, 0.0, 0.0))
+        bleu_score_2 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.5, 0.5, 0.0, 0.0))
+        bleu_score_3 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.33, 0.33, 0.33, 0.0))
+        bleu_score_4 = nltk.bleu_score.corpus_bleu(captions_decoded, prediction_decoded, weights=(0.25, 0.25, 0.25, 0.25))
 
         end_time = time.time()
         avg_loss = test_loss/self.total_test_batch
         epoch_time = (end_time-start_time)/60
-        self.logger.log_message(f"Test Devset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU Score: {bleu_score:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
+        self.logger.log_message(f"Test Testset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU-1: {bleu_score_1:.5f} - BLEU-2: {bleu_score_2:.5f} - BLEU-3: {bleu_score_3:.5f} - BLEU-4: {bleu_score_4:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
