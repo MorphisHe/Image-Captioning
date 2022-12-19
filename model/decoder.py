@@ -28,14 +28,14 @@ class DecoderRNN(nn.Module):
         caption_embed = torch.cat((features.unsqueeze(dim=1), caption_embed), 1)
         
         # rnn
-        self.lstm.flatten_parameters()
         packed_cap_embed = pack_padded_sequence(
                                 caption_embed, lengths, 
                                 batch_first=True,
                                 enforce_sorted=False) # data: (total_words[padded], embed_size)
         hiddens, _ = self.lstm(packed_cap_embed) # data: (total_words[padded], hidden_size)
-        hiddens, _ = pad_packed_sequence(hiddens, batch_first=True) # unpack: (batch_size, padded_seq_length, hidden_size)
-        outputs = self.linear(hiddens) # (batch_size, padded_seq_length, vocab_size)
+        #hiddens, _ = pad_packed_sequence(hiddens, batch_first=True) # unpack: (batch_size, padded_seq_length, hidden_size)
+        #outputs = self.linear(hiddens) # (batch_size, padded_seq_length, vocab_size)
+        outputs = self.linear(hiddens[0]) # (total_words[padded], vocab_size)
 
         return outputs
 

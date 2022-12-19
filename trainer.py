@@ -149,21 +149,12 @@ class Trainer:
     def train_one_step(self, images, captions, lengths):
         self.optimizer.zero_grad()
         outputs = self.model(images, captions, lengths) # (batch_size, padded_seq_length, vocab_size)
-
-        # remove padding in loss calculation
-        unpadded_outputs = []
-        unpadded_captions = []
-        for length, output, caption in zip(lengths, outputs, captions):
-            unpadded_outputs.append(output[:length,:]) # (length, vocab_size)
-            unpadded_captions.append(caption[:length].unsqueeze(1)) # (length, 1)
-
-        unpadded_outputs = torch.vstack(unpadded_outputs) # (total_num_words, vocab_size)
-        unpadded_captions = torch.vstack(unpadded_captions) # (total_num_words, 1)
-
-        loss = self.criterion(
-            unpadded_outputs,
-            unpadded_captions.squeeze()
-        )
+        targets = torch.nn.utils.rnn.pack_padded_sequence(
+                                        captions, 
+                                        lengths, 
+                                        batch_first=True, 
+                                        enforce_sorted=False)[0] # (batch_size*padded_seq_length)
+        loss = self.criterion(outputs, targets)
         
         # steps
         loss.backward()
@@ -195,21 +186,12 @@ class Trainer:
                 images, captions, lengths = images.to(self.device), captions.to(self.device), lengths
                 img_feats = self.model.encoder(images)
                 outputs = self.model.decoder(img_feats, captions, lengths)
-
-                # remove padding in loss calculation
-                unpadded_outputs = []
-                unpadded_captions = []
-                for length, output, caption in zip(lengths, outputs, captions):
-                    unpadded_outputs.append(output[:length,:]) # (length, vocab_size)
-                    unpadded_captions.append(caption[:length].unsqueeze(1)) # (length, 1)
-
-                unpadded_outputs = torch.vstack(unpadded_outputs) # (total_num_words, vocab_size)
-                unpadded_captions = torch.vstack(unpadded_captions) # (total_num_words, 1)
-
-                loss = self.criterion(
-                    unpadded_outputs,
-                    unpadded_captions.squeeze()
-                )
+                targets = torch.nn.utils.rnn.pack_padded_sequence(
+                                                captions, 
+                                                lengths, 
+                                                batch_first=True, 
+                                                enforce_sorted=False)[0] # (batch_size*padded_seq_length)
+                loss = self.criterion(outputs, targets)
                 test_loss += loss.item()
 
                 # greedy search
