@@ -115,6 +115,8 @@ class Trainer:
             self.cur_epoch = epoch
             self.logger.log_line()
             self.train_one_epoch()
+            # save ckp every epoch
+            torch.save(self.model.state_dict(), os.path.join(self.output_dir, "latest-model.pt"))
             
             # eval one epoch
             self.logger.log_line()
