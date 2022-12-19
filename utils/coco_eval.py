@@ -2,7 +2,7 @@ from pycocoevalcap.bleu.bleu import Bleu
 from pycocoevalcap.meteor.meteor import Meteor
 from pycocoevalcap.rouge.rouge import Rouge
 from pycocoevalcap.cider.cider import Cider
-from pycocoevalcap.spice.spice import Spice
+#from pycocoevalcap.spice.spice import Spice
 
 
 class Scorer():
@@ -12,7 +12,7 @@ class Scorer():
             (Meteor(),"METEOR"),
             (Rouge(), "ROUGE_L"),
             (Cider(), "CIDEr"),
-            (Spice(), "SPICE")
+            #(Spice(), "SPICE")
         ]
     
     def compute_scores(self, refs, preds):
@@ -42,7 +42,8 @@ class Scorer():
         ROUGE_L = total_scores["ROUGE_L"]
         METEOR = total_scores["METEOR"]
         CIDEr = total_scores["CIDEr"]
-        SPICE = total_scores["SPICE"]
+        #SPICE = total_scores["SPICE"]
+        SPICE = 0
 
         return bleu_score_1, bleu_score_2, bleu_score_3, bleu_score_4, ROUGE_L, METEOR, CIDEr, SPICE
 
