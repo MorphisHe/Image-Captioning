@@ -8,12 +8,14 @@ class DecoderRNN(nn.Module):
     # code from: https://github.com/tatwan/image-captioning-pytorch/blob/main/model.py with modification
     def __init__(self, embed_size, hidden_size, vocab_size, num_layers):
         super(DecoderRNN, self).__init__()
+        self.vocab_size = hidden_size
 
         # create layers
         self.word_embedding = nn.Embedding(vocab_size, embed_size)
-        self.lstm = nn.LSTM(embed_size, hidden_size, num_layers, batch_first=True)
+        self.lstm = nn.GRU(embed_size, hidden_size, num_layers, batch_first=True)
         self.linear = nn.Linear(hidden_size, vocab_size)
-
+        self.dropout = nn.Dropout(p=0.4)
+    
     def forward(self, features, captions, lengths):
         '''
         `features`: (batch_size, embed_size) encoded image feature from Encoder model
@@ -22,6 +24,7 @@ class DecoderRNN(nn.Module):
         '''
         # caption embedding
         caption_embed = self.word_embedding(captions) # (batch_size, padded_seq_length, embed_size)
+        caption_embed = self.dropout(caption_embed)
 
         # ingestion step, appending image feature to caption embedding
         # (batch_size, padded_seq_length+1, embed_size) 
