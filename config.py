@@ -26,7 +26,7 @@ def get_configs():
     }
 
     callback_params = {
-        "patience": 5,
+        "patience": 20,
         "save_final_model": True,
     }
 

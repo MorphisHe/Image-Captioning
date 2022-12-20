@@ -223,7 +223,7 @@ class Trainer:
         self.logger.log_message(f"Eval Devset: Epoch #{self.cur_epoch}: Average Loss {avg_loss:.5f} - BLEU-1: {bleu_score_1:.5f} - BLEU-2: {bleu_score_2:.5f} - BLEU-3: {bleu_score_3:.5f} - BLEU-4: {bleu_score_4:.5f} - ROUGE_L: {ROUGE_L:.5f} - METEOR: {METEOR:.5f} - CIDEr: {CIDEr:.5f} - SPICE: {SPICE:.5f} - Epoch Testing Time: {epoch_time:.2} min(s)")
 
         # saving best model and early stopping
-        if not self.callbacks(self.model, bleu_score_4):
+        if not self.callbacks(self.model, bleu_score_1):
             self.eval_best_model_on_testdataset()
             exit(1)
 
