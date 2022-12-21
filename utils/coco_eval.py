@@ -26,13 +26,13 @@ class Scorer():
         new_refs = {}
         new_preds = {}
         for i, (ref, pred) in enumerate(list(zip(refs, preds))):
-            new_refs[str(i)] = [' '.join(ref)]
+            new_refs[str(i)] = [' '.join(ref_i) for ref_i in ref]
             new_preds[str(i)] = [' '.join(pred)]
 
         # metrics
         total_scores = {}
         for scorer, method in self.scorers:
-            score, _ = scorer.compute_score(new_preds, new_refs)
+            score, _ = scorer.compute_score(new_refs, new_preds)
             if type(method) == list:
                 total_scores["Bleu"] = score
             else:

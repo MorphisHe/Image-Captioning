@@ -132,7 +132,7 @@ class Trainer:
         ten_percent_batch_loss = 0 # use to accumlate training loss every 10% of an epoch
         start_time = time.time()
         
-        for batch_idx, (images, captions, lengths) in enumerate(self.train_dataloader):
+        for batch_idx, (images, captions, lengths, all_captions) in enumerate(self.train_dataloader):
             images, captions, lengths = images.to(self.device), captions.to(self.device), lengths
             loss = self.train_one_step(images, captions, lengths)
             epoch_loss += loss
@@ -174,17 +174,11 @@ class Trainer:
         vocab = self.train_dataloader.dataset.vocab
         end_seq_val = vocab.word2idx[END_SEQ]
         with torch.no_grad():
-            captions_decoded = []
             prediction_decoded = []
-            for images, captions, lengths in tqdm(self.dev_dataloader, desc="Eval Devset"):
-                # decode ground truth captions
-                for length, caption in zip(lengths, captions):
-                    encoded_caption = caption.cpu().numpy().astype(int).tolist()
-                    encoded_caption = encoded_caption[:length]
-                    decoded_caption = vocab.decode_seq(encoded_caption)
-                    captions_decoded.append(decoded_caption)
-
-                # get prediction   
+            all_captions_epoch = []
+            for images, captions, lengths, all_captions in tqdm(self.dev_dataloader, desc="Eval Devset"):
+                # get prediction
+                all_captions_epoch += all_captions
                 images, captions, lengths = images.to(self.device), captions.to(self.device), lengths
                 img_feats = self.model.encoder(images)
                 outputs = self.model.decoder(img_feats, captions, lengths)
@@ -214,7 +208,7 @@ class Trainer:
                     prediction_decoded.append(decoded_gen_seq)
         
         # eval metrics
-        scores = self.scorer.compute_scores(captions_decoded, prediction_decoded)
+        scores = self.scorer.compute_scores(all_captions_epoch, prediction_decoded)
         bleu_score_1, bleu_score_2, bleu_score_3, bleu_score_4, ROUGE_L, METEOR, CIDEr, SPICE = scores
 
         end_time = time.time()
@@ -237,17 +231,11 @@ class Trainer:
         vocab = self.test_dataloader.dataset.vocab
         end_seq_val = vocab.word2idx[END_SEQ]
         with torch.no_grad():
-            captions_decoded = []
             prediction_decoded = []
-            for images, captions, lengths in tqdm(self.test_dataloader, desc="Eval Testset"):
-                # decode ground truth captions
-                for length, caption in zip(lengths, captions):
-                    encoded_caption = caption.cpu().numpy().astype(int).tolist()
-                    encoded_caption = encoded_caption[:length]
-                    decoded_caption = vocab.decode_seq(encoded_caption)
-                    captions_decoded.append(decoded_caption)
-
-                # get prediction   
+            all_captions_epoch = []
+            for images, captions, lengths, all_captions in tqdm(self.test_dataloader, desc="Eval Testset"):
+                # get prediction
+                all_captions_epoch += all_captions
                 images, captions, lengths = images.to(self.device), captions.to(self.device), lengths
                 img_feats = self.model.encoder(images)
                 outputs = self.model.decoder(img_feats, captions, lengths)
@@ -277,7 +265,7 @@ class Trainer:
                     prediction_decoded.append(decoded_gen_seq)
         
         # eval metrics
-        scores = self.scorer.compute_scores(captions_decoded, prediction_decoded)
+        scores = self.scorer.compute_scores(all_captions_epoch, prediction_decoded)
         bleu_score_1, bleu_score_2, bleu_score_3, bleu_score_4, ROUGE_L, METEOR, CIDEr, SPICE = scores
 
         end_time = time.time()

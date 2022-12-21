@@ -96,6 +96,7 @@ class FlickrConvRNN(Dataset):
         # captions
         captions = self.labels[self.image_ids[idx]]
         encoded_captions = []
+        all_captions = []
         for i, caption in enumerate(captions):
             # lowercase, remove special chars
             tokens = caption.split()
@@ -104,16 +105,19 @@ class FlickrConvRNN(Dataset):
 
             # add start_seq and end_seq
             caption = [START_SEQ] + tokens + [END_SEQ]
+            
             # encode to indices
-            encoded_captions.append(self.vocab.encode_seq(caption))
-
+           
             if self.first_caption_only and i==0:
                 # use only first caption
-                break
+                 encoded_captions.append(self.vocab.encode_seq(caption))
+            all_captions.append(caption)
+
         
         return {
             "images": images,
-            "captions": encoded_captions
+            "captions": encoded_captions,
+            "all_captions": all_captions
         }
 
 
@@ -123,11 +127,14 @@ class BatchCollateFn:
         `data`: list of dictionary object each with key: "images", "captions"
             "images" (List[torch.tensor]): list of tensors
             "captions" (List[List[int]]): list of encoded captions
+            "all_captions" (List[List[str]]): all 5 captions of a sample
         '''
         images = []
         lengths = [] # actual length of each captions before padding
         captions = []
+        all_captions = [] # List[List[List[str]]]
         for batch in data:
+            all_captions.append(batch["all_captions"])
             for image in batch["images"]:
                 images.append(image.unsqueeze(dim=0)) # after torch.resize shape=(C,H,W) change to (H,W,C)
             for caption in batch["captions"]:
@@ -141,7 +148,7 @@ class BatchCollateFn:
             length = lengths[i]
             captions_padded[i, :length] = torch.tensor(caption, dtype=torch.long)
 
-        return images, captions_padded, lengths
+        return images, captions_padded, lengths, all_captions
         
 
 
