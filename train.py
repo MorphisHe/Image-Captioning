@@ -12,18 +12,18 @@ from model.image_captioning_model import ConvRNN
 def get_train_test_trans():
     transform_train = transforms.Compose([
         transforms.ToTensor(),
-        transforms.Resize((256, 256)),
+        transforms.Resize((224, 224)),
         #transforms.RandomCrop(32, padding=4),
-        transforms.RandomHorizontalFlip(),
-        transforms.Normalize((0.458, 0.446, 0.404), (0.280, 0.273, 0.287)), #flickr8k
+        #transforms.RandomHorizontalFlip(),
+        #transforms.Normalize((0.458, 0.446, 0.404), (0.280, 0.273, 0.287)), #flickr8k
         # transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
 
     ])
 
     transform_test = transforms.Compose([
         transforms.ToTensor(),
-        transforms.Resize((256, 256)),
-        transforms.Normalize((0.458, 0.446, 0.404), (0.280, 0.273, 0.287)) #flickr8k
+        transforms.Resize((224, 224)),
+        #transforms.Normalize((0.458, 0.446, 0.404), (0.280, 0.273, 0.287)) #flickr8k
         #transforms.Normalize((0.444, 0.421, 0.385), (0.285, 0.277, 0.286)), #flickr30k
     ])
 
@@ -56,7 +56,8 @@ if __name__ == "__main__":
     )
 
     # get model
-    model = ConvRNN(encoder_params, decoder_params, vocab_size=len(vocab))
+    use_vit = encoder_params.pop("use_vit")
+    model = ConvRNN(use_vit, encoder_params, decoder_params, vocab_size=len(vocab))
 
     # get trainer
     trainer = Trainer(model, train_dataloader, dev_dataloader, test_dataloader, 

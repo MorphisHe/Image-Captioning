@@ -6,7 +6,7 @@ def get_configs():
     }
 
     dataset_params = {
-        "train_bs": 32,
+        "train_bs": 128,
         "test_bs": 100,
         "first_caption_only": True,
         "image_dir": "data/flickr8k/images/",
@@ -15,7 +15,8 @@ def get_configs():
     }
 
     encoder_params = {
-        "embed_size": 256,
+        "use_vit": True,
+        "embed_size": 512,
         "freeze_cnn": True
     }
 
