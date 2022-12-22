@@ -94,7 +94,7 @@ class DecoderRNN(nn.Module):
             symbols_to_logits_fn=self._symbols_to_logits_fn,
             initial_ids=predicted,
             beam_size=beam_size,
-            decode_length=max_seq_length,
+            decode_length=max_seq_length+10,
             vocab_size=self.vocab_size,
             alpha=alpha,
             states=states,
@@ -103,5 +103,6 @@ class DecoderRNN(nn.Module):
         
         _, best_seq_idx = final_probs.max(1)
         best_seq = final_ids[:, best_seq_idx ,:].squeeze(1) # (batch_size, max_seq_length)
+        best_seq = torch.stack([best_seq, torch.tensor([[END_SEQ]], device=inputs.device)], dim=1)
 
         return best_seq
