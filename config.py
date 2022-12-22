@@ -9,9 +9,9 @@ def get_configs():
         "train_bs": 128,
         "test_bs": 100,
         "first_caption_only": True,
-        "image_dir": "data/flickr8k/images/",
-        "label_path": "data/flickr8k/results.csv",
-        "delimiter": ","
+        "image_dir": "data/flickr30k-images",
+        "label_path": "data/results.csv",
+        "delimiter": "|"
     }
 
     encoder_params = {
