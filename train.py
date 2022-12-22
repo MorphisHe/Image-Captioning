@@ -47,17 +47,25 @@ if __name__ == "__main__":
     # get data augmentations
     transform_train, transform_test = get_train_test_trans()
 
-    # get dataloaders
-    train_ids, dev_ids, test_ids = get_data_split(dataset_params["image_dir"])
+    # get vocab
     vocab = get_vocabulary(dataset_params["label_path"], dataset_params["delimiter"])
-    train_dataloader, dev_dataloader, test_dataloader = get_dataloader(
-        train_ids, dev_ids, test_ids, **dataset_params, vocab=vocab,
-        transform_train=transform_train, transform_test=transform_test
-    )
 
     # get model
     use_vit = encoder_params.pop("use_vit")
+    use_beam_search = decoder_params.pop("use_beam_search")
+    beam_size = decoder_params.pop("beam_size")
     model = ConvRNN(use_vit, encoder_params, decoder_params, vocab_size=len(vocab))
+
+    # get dataloaders
+    if use_beam_search:
+        # beam only support test batch_size of 1!!!
+        dataset_params["test_bs"] = 1
+    train_ids, dev_ids, test_ids = get_data_split(dataset_params["image_dir"])
+    train_dataloader, dev_dataloader, test_dataloader = get_dataloader(
+        train_ids, dev_ids, test_ids, **dataset_params, vocab=vocab,
+        use_beam_search=use_beam_search, beam_size=beam_size,
+        transform_train=transform_train, transform_test=transform_test
+    )
 
     # get trainer
     trainer = Trainer(model, train_dataloader, dev_dataloader, test_dataloader, 
