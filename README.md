@@ -45,3 +45,8 @@ python3 train.py # train model
 ```bash
 python3 plot_loss.py
 ```
+
+<br>
+
+### Training Log:
+`training_logs` stores all model training logs. Since model checkpoint is too large, we can't push them to github repo. However training log shows loss and set of metric for training the model. Each log file is named with the architecture used for that particular training. Ex: VIT-LSTM-BEAM3 uses ViT encoder and LSTM decoder with Beam Search and Beam Size of 3.

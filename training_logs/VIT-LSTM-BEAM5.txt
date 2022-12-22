@@ -1,0 +1,589 @@
+12/22/2022 03:29:47 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:47 PM Name                                                                   Weight Shape                   Total Parameters               Trainable                     
+12/22/2022 03:29:47 PM encoder.vit.embeddings.cls_token                                       torch.Size([1, 1, 768])        768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.embeddings.position_embeddings                             torch.Size([1, 197, 768])      151296                         0                             
+12/22/2022 03:29:47 PM encoder.vit.embeddings.patch_embeddings.projection.weight              torch.Size([768, 3, 16, 16])   589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.embeddings.patch_embeddings.projection.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.0.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.1.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.2.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.3.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.4.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.5.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.6.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.7.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.8.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.attention.attention.query.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.attention.attention.query.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.attention.attention.key.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.attention.attention.key.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.attention.attention.value.weight           torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.attention.attention.value.bias             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.attention.output.dense.weight              torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.attention.output.dense.bias                torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.intermediate.dense.weight                  torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.intermediate.dense.bias                    torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.output.dense.weight                        torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.output.dense.bias                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.layernorm_before.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.layernorm_before.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.layernorm_after.weight                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.9.layernorm_after.bias                       torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.attention.attention.query.weight          torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.attention.attention.query.bias            torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.attention.attention.key.weight            torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.attention.attention.key.bias              torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.attention.attention.value.weight          torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.attention.attention.value.bias            torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.attention.output.dense.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.attention.output.dense.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.intermediate.dense.weight                 torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.intermediate.dense.bias                   torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.output.dense.weight                       torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.output.dense.bias                         torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.layernorm_before.weight                   torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.layernorm_before.bias                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.layernorm_after.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.10.layernorm_after.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.attention.attention.query.weight          torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.attention.attention.query.bias            torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.attention.attention.key.weight            torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.attention.attention.key.bias              torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.attention.attention.value.weight          torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.attention.attention.value.bias            torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.attention.output.dense.weight             torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.attention.output.dense.bias               torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.intermediate.dense.weight                 torch.Size([3072, 768])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.intermediate.dense.bias                   torch.Size([3072])             3072                           0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.output.dense.weight                       torch.Size([768, 3072])        2359296                        0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.output.dense.bias                         torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.layernorm_before.weight                   torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.layernorm_before.bias                     torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.layernorm_after.weight                    torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.encoder.layer.11.layernorm_after.bias                      torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.layernorm.weight                                           torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.layernorm.bias                                             torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.vit.pooler.dense.weight                                        torch.Size([768, 768])         589824                         0                             
+12/22/2022 03:29:47 PM encoder.vit.pooler.dense.bias                                          torch.Size([768])              768                            0                             
+12/22/2022 03:29:47 PM encoder.embed.weight                                                   torch.Size([512, 768])         393216                         1                             
+12/22/2022 03:29:47 PM encoder.embed.bias                                                     torch.Size([512])              512                            1                             
+12/22/2022 03:29:47 PM encoder.bn.weight                                                      torch.Size([512])              512                            1                             
+12/22/2022 03:29:47 PM encoder.bn.bias                                                        torch.Size([512])              512                            1                             
+12/22/2022 03:29:47 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:47 PM Name                                                                   Weight Shape                   Total Parameters               Trainable                     
+12/22/2022 03:29:47 PM decoder.word_embedding.weight                                          torch.Size([2959, 512])        1515008                        1                             
+12/22/2022 03:29:47 PM decoder.lstm.weight_ih_l0                                              torch.Size([2048, 512])        1048576                        1                             
+12/22/2022 03:29:47 PM decoder.lstm.weight_hh_l0                                              torch.Size([2048, 512])        1048576                        1                             
+12/22/2022 03:29:47 PM decoder.lstm.bias_ih_l0                                                torch.Size([2048])             2048                           1                             
+12/22/2022 03:29:47 PM decoder.lstm.bias_hh_l0                                                torch.Size([2048])             2048                           1                             
+12/22/2022 03:29:47 PM decoder.linear.weight                                                  torch.Size([2959, 512])        1515008                        1                             
+12/22/2022 03:29:47 PM decoder.linear.bias                                                    torch.Size([2959])             2959                           1                             
+12/22/2022 03:29:47 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:47 PM Total Number of Paramters: 91918223
+12/22/2022 03:29:47 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:47 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:47 PM Training Dataset Size: 6472
+12/22/2022 03:29:47 PM Training Dataset Total Batch#: 51
+12/22/2022 03:29:47 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:47 PM Dev Dataset Size: 809
+12/22/2022 03:29:47 PM Dev Dataset Total Batch#: 809
+12/22/2022 03:29:47 PM Test Dataset Size: 810
+12/22/2022 03:29:47 PM Test Dataset Total Batch#: 810
+12/22/2022 03:29:53 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:53 PM Trainer Kwargs:
+12/22/2022 03:29:53 PM 
+12/22/2022 03:29:53 PM device                         cuda
+12/22/2022 03:29:53 PM max_epoch                      100
+12/22/2022 03:29:53 PM output_dir                     outputs2/vit_lstm_beam5_2
+12/22/2022 03:29:53 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:53 PM Optimizer: {'lr': 0.001, 'type': 'Adam', 'kwargs': {'weight_decay': 0, 'amsgrad': True}}
+12/22/2022 03:29:53 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:29:53 PM Callbacks: EarlyStopping
+12/22/2022 03:29:53 PM 
+12/22/2022 03:29:53 PM save_final_model               True
+12/22/2022 03:29:53 PM patience                       10
+12/22/2022 03:29:53 PM threshold                      0.0001
+12/22/2022 03:29:53 PM mode                           max
+12/22/2022 03:29:53 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:30:16 PM Epoch 0 - iter 4/51 - 10% Avg loss 7.60367
+12/22/2022 03:30:28 PM Epoch 0 - iter 9/51 - 10% Avg loss 5.75772
+12/22/2022 03:30:41 PM Epoch 0 - iter 14/51 - 10% Avg loss 5.06971
+12/22/2022 03:30:53 PM Epoch 0 - iter 19/51 - 10% Avg loss 4.85477
+12/22/2022 03:31:05 PM Epoch 0 - iter 24/51 - 10% Avg loss 4.56269
+12/22/2022 03:31:18 PM Epoch 0 - iter 29/51 - 10% Avg loss 4.35013
+12/22/2022 03:31:30 PM Epoch 0 - iter 34/51 - 10% Avg loss 4.13599
+12/22/2022 03:31:43 PM Epoch 0 - iter 39/51 - 10% Avg loss 4.01055
+12/22/2022 03:31:55 PM Epoch 0 - iter 44/51 - 10% Avg loss 3.87204
+12/22/2022 03:32:07 PM Epoch 0 - iter 49/51 - 10% Avg loss 3.80415
+12/22/2022 03:32:09 PM Epoch #0: Epoch Average Loss 4.78203 - Epoch Training Time: 2.3 min(s)
+12/22/2022 03:32:10 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:33:02 PM Eval Devset: Epoch #0: Average Loss 3.88062 - BLEU-1: 0.59588 - BLEU-2: 0.36663 - BLEU-3: 0.20854 - BLEU-4: 0.12739 - ROUGE_L: 0.46813 - METEOR: 0.32309 - CIDEr: 0.15416 - SPICE: 0.00000 - Epoch Testing Time: 0.87 min(s)
+12/22/2022 03:33:02 PM Saving new best-model with accuracy: 0.1274
+12/22/2022 03:33:03 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:33:16 PM Epoch 1 - iter 4/51 - 10% Avg loss 3.59010
+12/22/2022 03:33:30 PM Epoch 1 - iter 9/51 - 10% Avg loss 3.54834
+12/22/2022 03:33:42 PM Epoch 1 - iter 14/51 - 10% Avg loss 3.55708
+12/22/2022 03:33:55 PM Epoch 1 - iter 19/51 - 10% Avg loss 3.37649
+12/22/2022 03:34:07 PM Epoch 1 - iter 24/51 - 10% Avg loss 3.40699
+12/22/2022 03:34:20 PM Epoch 1 - iter 29/51 - 10% Avg loss 3.39954
+12/22/2022 03:34:32 PM Epoch 1 - iter 34/51 - 10% Avg loss 3.39941
+12/22/2022 03:34:45 PM Epoch 1 - iter 39/51 - 10% Avg loss 3.35118
+12/22/2022 03:34:58 PM Epoch 1 - iter 44/51 - 10% Avg loss 3.31364
+12/22/2022 03:35:10 PM Epoch 1 - iter 49/51 - 10% Avg loss 3.32201
+12/22/2022 03:35:12 PM Epoch #1: Epoch Average Loss 3.41959 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:35:13 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:36:01 PM Eval Devset: Epoch #1: Average Loss 3.33907 - BLEU-1: 0.57089 - BLEU-2: 0.34118 - BLEU-3: 0.19243 - BLEU-4: 0.12272 - ROUGE_L: 0.44663 - METEOR: 0.32474 - CIDEr: 0.17714 - SPICE: 0.00000 - Epoch Testing Time: 0.8 min(s)
+12/22/2022 03:36:01 PM 
+12/22/2022 03:36:01 PM Bad Epoch. Total num bad epoch: 1
+12/22/2022 03:36:01 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:36:14 PM Epoch 2 - iter 4/51 - 10% Avg loss 3.18730
+12/22/2022 03:36:26 PM Epoch 2 - iter 9/51 - 10% Avg loss 3.11575
+12/22/2022 03:36:38 PM Epoch 2 - iter 14/51 - 10% Avg loss 3.11486
+12/22/2022 03:36:51 PM Epoch 2 - iter 19/51 - 10% Avg loss 3.14050
+12/22/2022 03:37:03 PM Epoch 2 - iter 24/51 - 10% Avg loss 3.14393
+12/22/2022 03:37:16 PM Epoch 2 - iter 29/51 - 10% Avg loss 3.09860
+12/22/2022 03:37:29 PM Epoch 2 - iter 34/51 - 10% Avg loss 3.05385
+12/22/2022 03:37:41 PM Epoch 2 - iter 39/51 - 10% Avg loss 3.07277
+12/22/2022 03:37:54 PM Epoch 2 - iter 44/51 - 10% Avg loss 3.04543
+12/22/2022 03:38:06 PM Epoch 2 - iter 49/51 - 10% Avg loss 3.01692
+12/22/2022 03:38:08 PM Epoch #2: Epoch Average Loss 3.09976 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:38:09 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:39:01 PM Eval Devset: Epoch #2: Average Loss 3.14879 - BLEU-1: 0.59429 - BLEU-2: 0.36985 - BLEU-3: 0.21759 - BLEU-4: 0.13681 - ROUGE_L: 0.47593 - METEOR: 0.33208 - CIDEr: 0.20840 - SPICE: 0.00000 - Epoch Testing Time: 0.87 min(s)
+12/22/2022 03:39:01 PM Saving new best-model with accuracy: 0.1368
+12/22/2022 03:39:02 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:39:15 PM Epoch 3 - iter 4/51 - 10% Avg loss 2.91528
+12/22/2022 03:39:28 PM Epoch 3 - iter 9/51 - 10% Avg loss 2.89439
+12/22/2022 03:39:41 PM Epoch 3 - iter 14/51 - 10% Avg loss 2.88259
+12/22/2022 03:39:53 PM Epoch 3 - iter 19/51 - 10% Avg loss 2.86907
+12/22/2022 03:40:06 PM Epoch 3 - iter 24/51 - 10% Avg loss 2.93576
+12/22/2022 03:40:18 PM Epoch 3 - iter 29/51 - 10% Avg loss 2.94294
+12/22/2022 03:40:31 PM Epoch 3 - iter 34/51 - 10% Avg loss 2.88721
+12/22/2022 03:40:44 PM Epoch 3 - iter 39/51 - 10% Avg loss 2.81906
+12/22/2022 03:40:56 PM Epoch 3 - iter 44/51 - 10% Avg loss 2.89227
+12/22/2022 03:41:09 PM Epoch 3 - iter 49/51 - 10% Avg loss 2.86695
+12/22/2022 03:41:10 PM Epoch #3: Epoch Average Loss 2.88921 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:41:11 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:42:04 PM Eval Devset: Epoch #3: Average Loss 3.02942 - BLEU-1: 0.58875 - BLEU-2: 0.37234 - BLEU-3: 0.22704 - BLEU-4: 0.14411 - ROUGE_L: 0.48542 - METEOR: 0.33519 - CIDEr: 0.23233 - SPICE: 0.00000 - Epoch Testing Time: 0.87 min(s)
+12/22/2022 03:42:04 PM Saving new best-model with accuracy: 0.1441
+12/22/2022 03:42:05 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:42:18 PM Epoch 4 - iter 4/51 - 10% Avg loss 2.71750
+12/22/2022 03:42:31 PM Epoch 4 - iter 9/51 - 10% Avg loss 2.75862
+12/22/2022 03:42:43 PM Epoch 4 - iter 14/51 - 10% Avg loss 2.67463
+12/22/2022 03:42:56 PM Epoch 4 - iter 19/51 - 10% Avg loss 2.73405
+12/22/2022 03:43:08 PM Epoch 4 - iter 24/51 - 10% Avg loss 2.71579
+12/22/2022 03:43:21 PM Epoch 4 - iter 29/51 - 10% Avg loss 2.69153
+12/22/2022 03:43:33 PM Epoch 4 - iter 34/51 - 10% Avg loss 2.71711
+12/22/2022 03:43:46 PM Epoch 4 - iter 39/51 - 10% Avg loss 2.73846
+12/22/2022 03:43:58 PM Epoch 4 - iter 44/51 - 10% Avg loss 2.73527
+12/22/2022 03:44:11 PM Epoch 4 - iter 49/51 - 10% Avg loss 2.74445
+12/22/2022 03:44:12 PM Epoch #4: Epoch Average Loss 2.72210 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:44:14 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:45:07 PM Eval Devset: Epoch #4: Average Loss 2.94986 - BLEU-1: 0.57387 - BLEU-2: 0.35095 - BLEU-3: 0.21346 - BLEU-4: 0.13733 - ROUGE_L: 0.46600 - METEOR: 0.33093 - CIDEr: 0.22074 - SPICE: 0.00000 - Epoch Testing Time: 0.89 min(s)
+12/22/2022 03:45:07 PM 
+12/22/2022 03:45:07 PM Bad Epoch. Total num bad epoch: 1
+12/22/2022 03:45:07 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:45:20 PM Epoch 5 - iter 4/51 - 10% Avg loss 2.58019
+12/22/2022 03:45:32 PM Epoch 5 - iter 9/51 - 10% Avg loss 2.51107
+12/22/2022 03:45:44 PM Epoch 5 - iter 14/51 - 10% Avg loss 2.55196
+12/22/2022 03:45:57 PM Epoch 5 - iter 19/51 - 10% Avg loss 2.56675
+12/22/2022 03:46:09 PM Epoch 5 - iter 24/51 - 10% Avg loss 2.55732
+12/22/2022 03:46:22 PM Epoch 5 - iter 29/51 - 10% Avg loss 2.63961
+12/22/2022 03:46:34 PM Epoch 5 - iter 34/51 - 10% Avg loss 2.61179
+12/22/2022 03:46:47 PM Epoch 5 - iter 39/51 - 10% Avg loss 2.60048
+12/22/2022 03:47:00 PM Epoch 5 - iter 44/51 - 10% Avg loss 2.55170
+12/22/2022 03:47:12 PM Epoch 5 - iter 49/51 - 10% Avg loss 2.56805
+12/22/2022 03:47:14 PM Epoch #5: Epoch Average Loss 2.57554 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:47:15 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:48:06 PM Eval Devset: Epoch #5: Average Loss 2.89110 - BLEU-1: 0.61120 - BLEU-2: 0.39443 - BLEU-3: 0.25008 - BLEU-4: 0.16190 - ROUGE_L: 0.49976 - METEOR: 0.33970 - CIDEr: 0.26890 - SPICE: 0.00000 - Epoch Testing Time: 0.85 min(s)
+12/22/2022 03:48:06 PM Saving new best-model with accuracy: 0.1619
+12/22/2022 03:48:07 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:48:20 PM Epoch 6 - iter 4/51 - 10% Avg loss 2.45055
+12/22/2022 03:48:33 PM Epoch 6 - iter 9/51 - 10% Avg loss 2.39819
+12/22/2022 03:48:45 PM Epoch 6 - iter 14/51 - 10% Avg loss 2.44644
+12/22/2022 03:48:58 PM Epoch 6 - iter 19/51 - 10% Avg loss 2.46415
+12/22/2022 03:49:10 PM Epoch 6 - iter 24/51 - 10% Avg loss 2.44209
+12/22/2022 03:49:23 PM Epoch 6 - iter 29/51 - 10% Avg loss 2.44097
+12/22/2022 03:49:35 PM Epoch 6 - iter 34/51 - 10% Avg loss 2.44567
+12/22/2022 03:49:48 PM Epoch 6 - iter 39/51 - 10% Avg loss 2.46954
+12/22/2022 03:50:01 PM Epoch 6 - iter 44/51 - 10% Avg loss 2.42068
+12/22/2022 03:50:13 PM Epoch 6 - iter 49/51 - 10% Avg loss 2.43513
+12/22/2022 03:50:15 PM Epoch #6: Epoch Average Loss 2.44142 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:50:16 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:51:06 PM Eval Devset: Epoch #6: Average Loss 2.84676 - BLEU-1: 0.62553 - BLEU-2: 0.40709 - BLEU-3: 0.26440 - BLEU-4: 0.17745 - ROUGE_L: 0.50137 - METEOR: 0.34069 - CIDEr: 0.27181 - SPICE: 0.00000 - Epoch Testing Time: 0.83 min(s)
+12/22/2022 03:51:06 PM Saving new best-model with accuracy: 0.1774
+12/22/2022 03:51:08 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:51:21 PM Epoch 7 - iter 4/51 - 10% Avg loss 2.29068
+12/22/2022 03:51:33 PM Epoch 7 - iter 9/51 - 10% Avg loss 2.31942
+12/22/2022 03:51:46 PM Epoch 7 - iter 14/51 - 10% Avg loss 2.30205
+12/22/2022 03:51:58 PM Epoch 7 - iter 19/51 - 10% Avg loss 2.31933
+12/22/2022 03:52:11 PM Epoch 7 - iter 24/51 - 10% Avg loss 2.33885
+12/22/2022 03:52:23 PM Epoch 7 - iter 29/51 - 10% Avg loss 2.32755
+12/22/2022 03:52:36 PM Epoch 7 - iter 34/51 - 10% Avg loss 2.29761
+12/22/2022 03:52:48 PM Epoch 7 - iter 39/51 - 10% Avg loss 2.34506
+12/22/2022 03:53:01 PM Epoch 7 - iter 44/51 - 10% Avg loss 2.30630
+12/22/2022 03:53:13 PM Epoch 7 - iter 49/51 - 10% Avg loss 2.31999
+12/22/2022 03:53:15 PM Epoch #7: Epoch Average Loss 2.31752 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:53:16 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:54:07 PM Eval Devset: Epoch #7: Average Loss 2.81810 - BLEU-1: 0.62852 - BLEU-2: 0.41529 - BLEU-3: 0.27559 - BLEU-4: 0.18734 - ROUGE_L: 0.51104 - METEOR: 0.34482 - CIDEr: 0.31225 - SPICE: 0.00000 - Epoch Testing Time: 0.84 min(s)
+12/22/2022 03:54:07 PM Saving new best-model with accuracy: 0.1873
+12/22/2022 03:54:08 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:54:21 PM Epoch 8 - iter 4/51 - 10% Avg loss 2.18752
+12/22/2022 03:54:34 PM Epoch 8 - iter 9/51 - 10% Avg loss 2.19004
+12/22/2022 03:54:46 PM Epoch 8 - iter 14/51 - 10% Avg loss 2.13939
+12/22/2022 03:54:59 PM Epoch 8 - iter 19/51 - 10% Avg loss 2.16843
+12/22/2022 03:55:11 PM Epoch 8 - iter 24/51 - 10% Avg loss 2.17943
+12/22/2022 03:55:24 PM Epoch 8 - iter 29/51 - 10% Avg loss 2.21598
+12/22/2022 03:55:37 PM Epoch 8 - iter 34/51 - 10% Avg loss 2.22888
+12/22/2022 03:55:49 PM Epoch 8 - iter 39/51 - 10% Avg loss 2.21664
+12/22/2022 03:56:02 PM Epoch 8 - iter 44/51 - 10% Avg loss 2.20126
+12/22/2022 03:56:14 PM Epoch 8 - iter 49/51 - 10% Avg loss 2.23207
+12/22/2022 03:56:16 PM Epoch #8: Epoch Average Loss 2.19671 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:56:17 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:57:07 PM Eval Devset: Epoch #8: Average Loss 2.79645 - BLEU-1: 0.63577 - BLEU-2: 0.42650 - BLEU-3: 0.28749 - BLEU-4: 0.19770 - ROUGE_L: 0.51709 - METEOR: 0.34722 - CIDEr: 0.33798 - SPICE: 0.00000 - Epoch Testing Time: 0.83 min(s)
+12/22/2022 03:57:07 PM Saving new best-model with accuracy: 0.1977
+12/22/2022 03:57:08 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 03:57:21 PM Epoch 9 - iter 4/51 - 10% Avg loss 2.07407
+12/22/2022 03:57:34 PM Epoch 9 - iter 9/51 - 10% Avg loss 2.06918
+12/22/2022 03:57:46 PM Epoch 9 - iter 14/51 - 10% Avg loss 2.04265
+12/22/2022 03:57:59 PM Epoch 9 - iter 19/51 - 10% Avg loss 2.06915
+12/22/2022 03:58:11 PM Epoch 9 - iter 24/51 - 10% Avg loss 2.03395
+12/22/2022 03:58:24 PM Epoch 9 - iter 29/51 - 10% Avg loss 2.10715
+12/22/2022 03:58:37 PM Epoch 9 - iter 34/51 - 10% Avg loss 2.10293
+12/22/2022 03:58:49 PM Epoch 9 - iter 39/51 - 10% Avg loss 2.06654
+12/22/2022 03:59:02 PM Epoch 9 - iter 44/51 - 10% Avg loss 2.10843
+12/22/2022 03:59:14 PM Epoch 9 - iter 49/51 - 10% Avg loss 2.12645
+12/22/2022 03:59:16 PM Epoch #9: Epoch Average Loss 2.08052 - Epoch Training Time: 2.1 min(s)
+12/22/2022 03:59:17 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:00:08 PM Eval Devset: Epoch #9: Average Loss 2.79228 - BLEU-1: 0.65667 - BLEU-2: 0.44403 - BLEU-3: 0.29938 - BLEU-4: 0.20652 - ROUGE_L: 0.52526 - METEOR: 0.34930 - CIDEr: 0.35176 - SPICE: 0.00000 - Epoch Testing Time: 0.84 min(s)
+12/22/2022 04:00:08 PM Saving new best-model with accuracy: 0.2065
+12/22/2022 04:00:09 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:00:22 PM Epoch 10 - iter 4/51 - 10% Avg loss 1.93180
+12/22/2022 04:00:35 PM Epoch 10 - iter 9/51 - 10% Avg loss 1.94741
+12/22/2022 04:00:47 PM Epoch 10 - iter 14/51 - 10% Avg loss 1.93300
+12/22/2022 04:01:00 PM Epoch 10 - iter 19/51 - 10% Avg loss 2.00409
+12/22/2022 04:01:12 PM Epoch 10 - iter 24/51 - 10% Avg loss 1.96859
+12/22/2022 04:01:25 PM Epoch 10 - iter 29/51 - 10% Avg loss 1.97475
+12/22/2022 04:01:37 PM Epoch 10 - iter 34/51 - 10% Avg loss 1.98756
+12/22/2022 04:01:50 PM Epoch 10 - iter 39/51 - 10% Avg loss 1.97041
+12/22/2022 04:02:02 PM Epoch 10 - iter 44/51 - 10% Avg loss 1.95376
+12/22/2022 04:02:15 PM Epoch 10 - iter 49/51 - 10% Avg loss 2.01054
+12/22/2022 04:02:17 PM Epoch #10: Epoch Average Loss 1.96839 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:02:18 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:03:08 PM Eval Devset: Epoch #10: Average Loss 2.79123 - BLEU-1: 0.64279 - BLEU-2: 0.43167 - BLEU-3: 0.29187 - BLEU-4: 0.20204 - ROUGE_L: 0.52020 - METEOR: 0.34975 - CIDEr: 0.34910 - SPICE: 0.00000 - Epoch Testing Time: 0.83 min(s)
+12/22/2022 04:03:08 PM 
+12/22/2022 04:03:08 PM Bad Epoch. Total num bad epoch: 1
+12/22/2022 04:03:08 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:03:20 PM Epoch 11 - iter 4/51 - 10% Avg loss 1.83757
+12/22/2022 04:03:33 PM Epoch 11 - iter 9/51 - 10% Avg loss 1.85417
+12/22/2022 04:03:45 PM Epoch 11 - iter 14/51 - 10% Avg loss 1.87094
+12/22/2022 04:03:58 PM Epoch 11 - iter 19/51 - 10% Avg loss 1.87669
+12/22/2022 04:04:10 PM Epoch 11 - iter 24/51 - 10% Avg loss 1.82474
+12/22/2022 04:04:23 PM Epoch 11 - iter 29/51 - 10% Avg loss 1.84576
+12/22/2022 04:04:35 PM Epoch 11 - iter 34/51 - 10% Avg loss 1.85830
+12/22/2022 04:04:48 PM Epoch 11 - iter 39/51 - 10% Avg loss 1.88650
+12/22/2022 04:05:00 PM Epoch 11 - iter 44/51 - 10% Avg loss 1.86353
+12/22/2022 04:05:14 PM Epoch 11 - iter 49/51 - 10% Avg loss 1.87426
+12/22/2022 04:05:15 PM Epoch #11: Epoch Average Loss 1.85908 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:05:17 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:06:05 PM Eval Devset: Epoch #11: Average Loss 2.78478 - BLEU-1: 0.66069 - BLEU-2: 0.45207 - BLEU-3: 0.30984 - BLEU-4: 0.21669 - ROUGE_L: 0.53212 - METEOR: 0.35363 - CIDEr: 0.39215 - SPICE: 0.00000 - Epoch Testing Time: 0.8 min(s)
+12/22/2022 04:06:05 PM Saving new best-model with accuracy: 0.2167
+12/22/2022 04:06:06 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:06:19 PM Epoch 12 - iter 4/51 - 10% Avg loss 1.70744
+12/22/2022 04:06:32 PM Epoch 12 - iter 9/51 - 10% Avg loss 1.70664
+12/22/2022 04:06:44 PM Epoch 12 - iter 14/51 - 10% Avg loss 1.73768
+12/22/2022 04:06:56 PM Epoch 12 - iter 19/51 - 10% Avg loss 1.73799
+12/22/2022 04:07:09 PM Epoch 12 - iter 24/51 - 10% Avg loss 1.74605
+12/22/2022 04:07:22 PM Epoch 12 - iter 29/51 - 10% Avg loss 1.74789
+12/22/2022 04:07:34 PM Epoch 12 - iter 34/51 - 10% Avg loss 1.75084
+12/22/2022 04:07:47 PM Epoch 12 - iter 39/51 - 10% Avg loss 1.76965
+12/22/2022 04:07:59 PM Epoch 12 - iter 44/51 - 10% Avg loss 1.77803
+12/22/2022 04:08:12 PM Epoch 12 - iter 49/51 - 10% Avg loss 1.78969
+12/22/2022 04:08:13 PM Epoch #12: Epoch Average Loss 1.74775 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:08:15 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:09:04 PM Eval Devset: Epoch #12: Average Loss 2.79198 - BLEU-1: 0.65338 - BLEU-2: 0.44231 - BLEU-3: 0.30290 - BLEU-4: 0.21175 - ROUGE_L: 0.52851 - METEOR: 0.35325 - CIDEr: 0.39467 - SPICE: 0.00000 - Epoch Testing Time: 0.82 min(s)
+12/22/2022 04:09:04 PM 
+12/22/2022 04:09:04 PM Bad Epoch. Total num bad epoch: 1
+12/22/2022 04:09:04 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:09:16 PM Epoch 13 - iter 4/51 - 10% Avg loss 1.61987
+12/22/2022 04:09:29 PM Epoch 13 - iter 9/51 - 10% Avg loss 1.59277
+12/22/2022 04:09:41 PM Epoch 13 - iter 14/51 - 10% Avg loss 1.61523
+12/22/2022 04:09:54 PM Epoch 13 - iter 19/51 - 10% Avg loss 1.62061
+12/22/2022 04:10:07 PM Epoch 13 - iter 24/51 - 10% Avg loss 1.64644
+12/22/2022 04:10:20 PM Epoch 13 - iter 29/51 - 10% Avg loss 1.66007
+12/22/2022 04:10:32 PM Epoch 13 - iter 34/51 - 10% Avg loss 1.64375
+12/22/2022 04:10:45 PM Epoch 13 - iter 39/51 - 10% Avg loss 1.67752
+12/22/2022 04:10:58 PM Epoch 13 - iter 44/51 - 10% Avg loss 1.70195
+12/22/2022 04:11:10 PM Epoch 13 - iter 49/51 - 10% Avg loss 1.69659
+12/22/2022 04:11:12 PM Epoch #13: Epoch Average Loss 1.64822 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:11:13 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:12:01 PM Eval Devset: Epoch #13: Average Loss 2.81080 - BLEU-1: 0.64795 - BLEU-2: 0.44070 - BLEU-3: 0.30315 - BLEU-4: 0.21171 - ROUGE_L: 0.52775 - METEOR: 0.35342 - CIDEr: 0.37726 - SPICE: 0.00000 - Epoch Testing Time: 0.8 min(s)
+12/22/2022 04:12:01 PM 
+12/22/2022 04:12:01 PM Bad Epoch. Total num bad epoch: 2
+12/22/2022 04:12:01 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:12:14 PM Epoch 14 - iter 4/51 - 10% Avg loss 1.50499
+12/22/2022 04:12:26 PM Epoch 14 - iter 9/51 - 10% Avg loss 1.52270
+12/22/2022 04:12:39 PM Epoch 14 - iter 14/51 - 10% Avg loss 1.53031
+12/22/2022 04:12:51 PM Epoch 14 - iter 19/51 - 10% Avg loss 1.52947
+12/22/2022 04:13:04 PM Epoch 14 - iter 24/51 - 10% Avg loss 1.52717
+12/22/2022 04:13:16 PM Epoch 14 - iter 29/51 - 10% Avg loss 1.57273
+12/22/2022 04:13:29 PM Epoch 14 - iter 34/51 - 10% Avg loss 1.56128
+12/22/2022 04:13:42 PM Epoch 14 - iter 39/51 - 10% Avg loss 1.56352
+12/22/2022 04:13:54 PM Epoch 14 - iter 44/51 - 10% Avg loss 1.56739
+12/22/2022 04:14:07 PM Epoch 14 - iter 49/51 - 10% Avg loss 1.57468
+12/22/2022 04:14:08 PM Epoch #14: Epoch Average Loss 1.54578 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:14:10 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:15:00 PM Eval Devset: Epoch #14: Average Loss 2.82301 - BLEU-1: 0.65218 - BLEU-2: 0.44506 - BLEU-3: 0.30380 - BLEU-4: 0.21007 - ROUGE_L: 0.53122 - METEOR: 0.35230 - CIDEr: 0.38983 - SPICE: 0.00000 - Epoch Testing Time: 0.84 min(s)
+12/22/2022 04:15:00 PM 
+12/22/2022 04:15:00 PM Bad Epoch. Total num bad epoch: 3
+12/22/2022 04:15:00 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:15:13 PM Epoch 15 - iter 4/51 - 10% Avg loss 1.39927
+12/22/2022 04:15:25 PM Epoch 15 - iter 9/51 - 10% Avg loss 1.42170
+12/22/2022 04:15:38 PM Epoch 15 - iter 14/51 - 10% Avg loss 1.41703
+12/22/2022 04:15:50 PM Epoch 15 - iter 19/51 - 10% Avg loss 1.42269
+12/22/2022 04:16:03 PM Epoch 15 - iter 24/51 - 10% Avg loss 1.43869
+12/22/2022 04:16:16 PM Epoch 15 - iter 29/51 - 10% Avg loss 1.43818
+12/22/2022 04:16:29 PM Epoch 15 - iter 34/51 - 10% Avg loss 1.46471
+12/22/2022 04:16:41 PM Epoch 15 - iter 39/51 - 10% Avg loss 1.47664
+12/22/2022 04:16:54 PM Epoch 15 - iter 44/51 - 10% Avg loss 1.46918
+12/22/2022 04:17:06 PM Epoch 15 - iter 49/51 - 10% Avg loss 1.48490
+12/22/2022 04:17:08 PM Epoch #15: Epoch Average Loss 1.44515 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:17:09 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:17:57 PM Eval Devset: Epoch #15: Average Loss 2.84168 - BLEU-1: 0.63788 - BLEU-2: 0.43310 - BLEU-3: 0.29571 - BLEU-4: 0.20329 - ROUGE_L: 0.52783 - METEOR: 0.35205 - CIDEr: 0.37953 - SPICE: 0.00000 - Epoch Testing Time: 0.79 min(s)
+12/22/2022 04:17:57 PM 
+12/22/2022 04:17:57 PM Bad Epoch. Total num bad epoch: 4
+12/22/2022 04:17:57 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:18:09 PM Epoch 16 - iter 4/51 - 10% Avg loss 1.30027
+12/22/2022 04:18:22 PM Epoch 16 - iter 9/51 - 10% Avg loss 1.31639
+12/22/2022 04:18:34 PM Epoch 16 - iter 14/51 - 10% Avg loss 1.32734
+12/22/2022 04:18:46 PM Epoch 16 - iter 19/51 - 10% Avg loss 1.30796
+12/22/2022 04:18:59 PM Epoch 16 - iter 24/51 - 10% Avg loss 1.34532
+12/22/2022 04:19:12 PM Epoch 16 - iter 29/51 - 10% Avg loss 1.34725
+12/22/2022 04:19:25 PM Epoch 16 - iter 34/51 - 10% Avg loss 1.38481
+12/22/2022 04:19:37 PM Epoch 16 - iter 39/51 - 10% Avg loss 1.35797
+12/22/2022 04:19:50 PM Epoch 16 - iter 44/51 - 10% Avg loss 1.38577
+12/22/2022 04:20:03 PM Epoch 16 - iter 49/51 - 10% Avg loss 1.36709
+12/22/2022 04:20:04 PM Epoch #16: Epoch Average Loss 1.34465 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:20:05 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:20:53 PM Eval Devset: Epoch #16: Average Loss 2.87288 - BLEU-1: 0.64772 - BLEU-2: 0.44237 - BLEU-3: 0.30288 - BLEU-4: 0.20781 - ROUGE_L: 0.53079 - METEOR: 0.35416 - CIDEr: 0.39830 - SPICE: 0.00000 - Epoch Testing Time: 0.79 min(s)
+12/22/2022 04:20:53 PM 
+12/22/2022 04:20:53 PM Bad Epoch. Total num bad epoch: 5
+12/22/2022 04:20:53 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:21:05 PM Epoch 17 - iter 4/51 - 10% Avg loss 1.20973
+12/22/2022 04:21:18 PM Epoch 17 - iter 9/51 - 10% Avg loss 1.20852
+12/22/2022 04:21:31 PM Epoch 17 - iter 14/51 - 10% Avg loss 1.22963
+12/22/2022 04:21:43 PM Epoch 17 - iter 19/51 - 10% Avg loss 1.22180
+12/22/2022 04:21:56 PM Epoch 17 - iter 24/51 - 10% Avg loss 1.25022
+12/22/2022 04:22:08 PM Epoch 17 - iter 29/51 - 10% Avg loss 1.26887
+12/22/2022 04:22:21 PM Epoch 17 - iter 34/51 - 10% Avg loss 1.26088
+12/22/2022 04:22:34 PM Epoch 17 - iter 39/51 - 10% Avg loss 1.27133
+12/22/2022 04:22:46 PM Epoch 17 - iter 44/51 - 10% Avg loss 1.27793
+12/22/2022 04:22:59 PM Epoch 17 - iter 49/51 - 10% Avg loss 1.28576
+12/22/2022 04:23:01 PM Epoch #17: Epoch Average Loss 1.24976 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:23:02 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:23:50 PM Eval Devset: Epoch #17: Average Loss 2.90927 - BLEU-1: 0.64111 - BLEU-2: 0.43875 - BLEU-3: 0.29970 - BLEU-4: 0.20834 - ROUGE_L: 0.52825 - METEOR: 0.35369 - CIDEr: 0.38909 - SPICE: 0.00000 - Epoch Testing Time: 0.8 min(s)
+12/22/2022 04:23:50 PM 
+12/22/2022 04:23:50 PM Bad Epoch. Total num bad epoch: 6
+12/22/2022 04:23:50 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:24:03 PM Epoch 18 - iter 4/51 - 10% Avg loss 1.10700
+12/22/2022 04:24:15 PM Epoch 18 - iter 9/51 - 10% Avg loss 1.12632
+12/22/2022 04:24:27 PM Epoch 18 - iter 14/51 - 10% Avg loss 1.14352
+12/22/2022 04:24:40 PM Epoch 18 - iter 19/51 - 10% Avg loss 1.15398
+12/22/2022 04:24:52 PM Epoch 18 - iter 24/51 - 10% Avg loss 1.14335
+12/22/2022 04:25:05 PM Epoch 18 - iter 29/51 - 10% Avg loss 1.15084
+12/22/2022 04:25:17 PM Epoch 18 - iter 34/51 - 10% Avg loss 1.17350
+12/22/2022 04:25:30 PM Epoch 18 - iter 39/51 - 10% Avg loss 1.17971
+12/22/2022 04:25:42 PM Epoch 18 - iter 44/51 - 10% Avg loss 1.17169
+12/22/2022 04:25:55 PM Epoch 18 - iter 49/51 - 10% Avg loss 1.20917
+12/22/2022 04:25:56 PM Epoch #18: Epoch Average Loss 1.15675 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:25:58 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:26:46 PM Eval Devset: Epoch #18: Average Loss 2.95553 - BLEU-1: 0.64245 - BLEU-2: 0.43869 - BLEU-3: 0.29926 - BLEU-4: 0.20573 - ROUGE_L: 0.53012 - METEOR: 0.35312 - CIDEr: 0.38990 - SPICE: 0.00000 - Epoch Testing Time: 0.8 min(s)
+12/22/2022 04:26:46 PM 
+12/22/2022 04:26:46 PM Bad Epoch. Total num bad epoch: 7
+12/22/2022 04:26:46 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:26:58 PM Epoch 19 - iter 4/51 - 10% Avg loss 1.04390
+12/22/2022 04:27:11 PM Epoch 19 - iter 9/51 - 10% Avg loss 1.03844
+12/22/2022 04:27:23 PM Epoch 19 - iter 14/51 - 10% Avg loss 1.03542
+12/22/2022 04:27:36 PM Epoch 19 - iter 19/51 - 10% Avg loss 1.05343
+12/22/2022 04:27:48 PM Epoch 19 - iter 24/51 - 10% Avg loss 1.06841
+12/22/2022 04:28:01 PM Epoch 19 - iter 29/51 - 10% Avg loss 1.07086
+12/22/2022 04:28:14 PM Epoch 19 - iter 34/51 - 10% Avg loss 1.07397
+12/22/2022 04:28:27 PM Epoch 19 - iter 39/51 - 10% Avg loss 1.08390
+12/22/2022 04:28:40 PM Epoch 19 - iter 44/51 - 10% Avg loss 1.09567
+12/22/2022 04:28:52 PM Epoch 19 - iter 49/51 - 10% Avg loss 1.10503
+12/22/2022 04:28:54 PM Epoch #19: Epoch Average Loss 1.06853 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:28:55 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:29:44 PM Eval Devset: Epoch #19: Average Loss 2.98463 - BLEU-1: 0.63185 - BLEU-2: 0.43119 - BLEU-3: 0.29302 - BLEU-4: 0.20091 - ROUGE_L: 0.52735 - METEOR: 0.35258 - CIDEr: 0.38182 - SPICE: 0.00000 - Epoch Testing Time: 0.81 min(s)
+12/22/2022 04:29:44 PM 
+12/22/2022 04:29:44 PM Bad Epoch. Total num bad epoch: 8
+12/22/2022 04:29:44 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:29:56 PM Epoch 20 - iter 4/51 - 10% Avg loss 0.93758
+12/22/2022 04:30:09 PM Epoch 20 - iter 9/51 - 10% Avg loss 0.95160
+12/22/2022 04:30:22 PM Epoch 20 - iter 14/51 - 10% Avg loss 0.94282
+12/22/2022 04:30:34 PM Epoch 20 - iter 19/51 - 10% Avg loss 0.96893
+12/22/2022 04:30:47 PM Epoch 20 - iter 24/51 - 10% Avg loss 0.97607
+12/22/2022 04:30:59 PM Epoch 20 - iter 29/51 - 10% Avg loss 0.98286
+12/22/2022 04:31:12 PM Epoch 20 - iter 34/51 - 10% Avg loss 1.00061
+12/22/2022 04:31:25 PM Epoch 20 - iter 39/51 - 10% Avg loss 1.01256
+12/22/2022 04:31:37 PM Epoch 20 - iter 44/51 - 10% Avg loss 1.02025
+12/22/2022 04:31:50 PM Epoch 20 - iter 49/51 - 10% Avg loss 1.01691
+12/22/2022 04:31:52 PM Epoch #20: Epoch Average Loss 0.98164 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:31:53 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:32:44 PM Eval Devset: Epoch #20: Average Loss 3.04242 - BLEU-1: 0.63761 - BLEU-2: 0.43626 - BLEU-3: 0.29996 - BLEU-4: 0.20747 - ROUGE_L: 0.52657 - METEOR: 0.35299 - CIDEr: 0.39193 - SPICE: 0.00000 - Epoch Testing Time: 0.85 min(s)
+12/22/2022 04:32:44 PM 
+12/22/2022 04:32:44 PM Bad Epoch. Total num bad epoch: 9
+12/22/2022 04:32:44 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:32:57 PM Epoch 21 - iter 4/51 - 10% Avg loss 0.86346
+12/22/2022 04:33:09 PM Epoch 21 - iter 9/51 - 10% Avg loss 0.88079
+12/22/2022 04:33:22 PM Epoch 21 - iter 14/51 - 10% Avg loss 0.88897
+12/22/2022 04:33:34 PM Epoch 21 - iter 19/51 - 10% Avg loss 0.87433
+12/22/2022 04:33:47 PM Epoch 21 - iter 24/51 - 10% Avg loss 0.89792
+12/22/2022 04:34:00 PM Epoch 21 - iter 29/51 - 10% Avg loss 0.91186
+12/22/2022 04:34:12 PM Epoch 21 - iter 34/51 - 10% Avg loss 0.91071
+12/22/2022 04:34:25 PM Epoch 21 - iter 39/51 - 10% Avg loss 0.90764
+12/22/2022 04:34:38 PM Epoch 21 - iter 44/51 - 10% Avg loss 0.92334
+12/22/2022 04:34:51 PM Epoch 21 - iter 49/51 - 10% Avg loss 0.94132
+12/22/2022 04:34:52 PM Epoch #21: Epoch Average Loss 0.89998 - Epoch Training Time: 2.1 min(s)
+12/22/2022 04:34:54 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:35:42 PM Eval Devset: Epoch #21: Average Loss 3.07965 - BLEU-1: 0.62834 - BLEU-2: 0.42662 - BLEU-3: 0.28979 - BLEU-4: 0.19958 - ROUGE_L: 0.51911 - METEOR: 0.35224 - CIDEr: 0.39273 - SPICE: 0.00000 - Epoch Testing Time: 0.8 min(s)
+12/22/2022 04:35:42 PM 
+12/22/2022 04:35:42 PM Bad Epoch. Total num bad epoch: 10
+12/22/2022 04:35:42 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:35:42 PM Exiting from training early. Best model score: 0.2167. Saving final model: True 
+12/22/2022 04:35:42 PM Saving model ...
+12/22/2022 04:35:43 PM Done.
+12/22/2022 04:36:36 PM Test Testset: Epoch #21: Average Loss 2.80719 - BLEU-1: 0.65790 - BLEU-2: 0.44833 - BLEU-3: 0.30791 - BLEU-4: 0.21741 - ROUGE_L: 0.52345 - METEOR: 0.35216 - CIDEr: 0.37325 - SPICE: 0.00000 - Epoch Testing Time: 0.84 min(s)
