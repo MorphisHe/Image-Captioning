@@ -203,7 +203,7 @@ class Trainer:
                 else:
                     # beam search
                     max_seq_length = max(lengths)
-                    generated_seqs= self.model.decoder.beam_search(img_feats, max_seq_length)
+                    generated_seqs= self.model.decoder.beam_search(img_feats, max_seq_length, beam_size=self.beam_size)
                     generated_seqs = generated_seqs.cpu().numpy().astype(int).tolist()
 
                 # decode genereated sequences
@@ -273,7 +273,7 @@ class Trainer:
                 else:
                     # beam search
                     max_seq_length = max(lengths)
-                    generated_seqs= self.model.decoder.beam_search(img_feats, max_seq_length)
+                    generated_seqs= self.model.decoder.beam_search(img_feats, max_seq_length, beam_size=self.beam_size)
                     generated_seqs = generated_seqs.cpu().numpy().astype(int).tolist()
 
                 # decode genereated sequences
