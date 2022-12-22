@@ -289,6 +289,11 @@ class Trainer:
                         generated_seq = [end_seq_val]
                     decoded_gen_seq = vocab.decode_seq(generated_seq)
                     prediction_decoded.append(decoded_gen_seq)
+
+            pre = pd.DataFrame(prediction_decoded)
+            pre.to_csv(os.path.join(self.output_dir, 'test_pre.csv'))
+            cap = pd.DataFrame(all_captions_epoch)
+            cap.to_csv(os.path.join(self.output_dir, 'test_captions.csv'))
         
         # eval metrics
         scores = self.scorer.compute_scores(all_captions_epoch, prediction_decoded)
