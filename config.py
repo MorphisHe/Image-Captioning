@@ -21,6 +21,7 @@ def get_configs():
     }
 
     decoder_params = {
+        "use_gru": False,
         "embed_size": encoder_params["embed_size"],
         "hidden_size": 512,
         "num_layers": 1,
