@@ -7,7 +7,7 @@ from texar.torch.utils import beam_search
 
 class DecoderRNN(nn.Module):
     # code from: https://github.com/tatwan/image-captioning-pytorch/blob/main/model.py with modification
-    def __init__(self, user_gru, embed_size, hidden_size, vocab_size, num_layers):
+    def __init__(self, use_gru, embed_size, hidden_size, vocab_size, num_layers):
         super(DecoderRNN, self).__init__()
         self.vocab_size = vocab_size
         self.hidden_size = hidden_size
