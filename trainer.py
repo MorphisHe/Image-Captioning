@@ -221,9 +221,9 @@ class Trainer:
                     prediction_decoded.append(decoded_gen_seq)
 
             pre = pd.DataFrame(prediction_decoded)
-            pre.to_csv('pre.csv')
+            pre.to_csv(os.path.join(self.output_dir, 'pre.csv'))
             cap = pd.DataFrame(all_captions_epoch)
-            cap.to_csv('caption.csv')
+            cap.to_csv(os.path.join(self.output_dir, 'captions.csv'))
 
         # eval metrics
         scores = self.scorer.compute_scores(all_captions_epoch, prediction_decoded)
