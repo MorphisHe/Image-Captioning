@@ -1,6 +1,7 @@
 import torch
 from torch import nn
-from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
+from torch.nn.utils.rnn import pack_padded_sequence
+from texar.torch.utils import beam_search
 
 
 
@@ -8,13 +9,13 @@ class DecoderRNN(nn.Module):
     # code from: https://github.com/tatwan/image-captioning-pytorch/blob/main/model.py with modification
     def __init__(self, embed_size, hidden_size, vocab_size, num_layers):
         super(DecoderRNN, self).__init__()
-        self.vocab_size = hidden_size
+        self.vocab_size = vocab_size
+        self.hidden_size = hidden_size
 
         # create layers
         self.word_embedding = nn.Embedding(vocab_size, embed_size)
         self.lstm = nn.LSTM(embed_size, hidden_size, num_layers, batch_first=True)
-        self.linear = nn.Linear(hidden_size, vocab_size)
-        self.dropout = nn.Dropout(p=0.4)
+        self.linear = nn.Linear(hidden_size, self.vocab_size)
     
     def forward(self, features, captions, lengths):
         '''
@@ -24,7 +25,6 @@ class DecoderRNN(nn.Module):
         '''
         # caption embedding
         caption_embed = self.word_embedding(captions) # (batch_size, padded_seq_length, embed_size)
-        caption_embed = self.dropout(caption_embed)
 
         # ingestion step, appending image feature to caption embedding
         # (batch_size, padded_seq_length+1, embed_size) 
@@ -59,3 +59,46 @@ class DecoderRNN(nn.Module):
         generated_seqs = torch.stack(generated_seqs, 1) # generated_seqs: (batch_size, max_seq_length)
         
         return generated_seqs
+
+    def _symbols_to_logits_fn(self, inputs, states):
+        '''
+        function that can take the currently decoded symbols and return the logits for the next symbol
+
+        `inputs` (batch_size, decoded_ids[size of current timestamp])
+        `outputs` (batch_size, vocab_size)
+        '''
+        inputs = inputs[:,-1].squeeze() # (beam_size)
+        states = (states[0].squeeze().unsqueeze(0), states[1].squeeze().unsqueeze(0))
+        inputs = self.word_embedding(inputs) # inputs: (batch_size, embed_size)
+        inputs = inputs.unsqueeze(1) # inputs: (batch_size, 1, embed_size)
+        hiddens, states = self.lstm(inputs, states) # hiddens: (batch_size, 1, hidden_size)
+        states = (states[0].squeeze(), states[1].squeeze())
+        outputs = self.linear(hiddens.squeeze(1)) # outputs:  (batch_size, vocab_size)
+
+        return outputs, states
+
+    def beam_search(self, features, max_seq_length=20, beam_size=3, alpha=0):
+        END_SEQ = 3
+
+        # get initial node symbols [ideally all START_SEQ] using encoder feature
+        inputs = features.unsqueeze(1) # (batch_size, 1, embed_size)
+        hiddens, states = self.lstm(inputs) # hiddens: (batch_size, 1, hidden_size)
+        outputs = self.linear(hiddens.squeeze(1)) # outputs:  (batch_size, vocab_size)
+        _, predicted = outputs.max(1) # predicted: (batch_size)
+
+        # beam search
+        final_ids, final_probs = beam_search.beam_search(
+            symbols_to_logits_fn=self._symbols_to_logits_fn,
+            initial_ids=predicted,
+            beam_size=beam_size,
+            decode_length=max_seq_length,
+            vocab_size=self.vocab_size,
+            alpha=alpha,
+            states=states,
+            eos_id=END_SEQ
+        )# (batch_size, beam_size, max_seq_length), (batch_size, beam_size)
+        
+        _, best_seq_idx = final_probs.max(1)
+        best_seq = final_ids[:, best_seq_idx ,:].squeeze(1) # (batch_size, max_seq_length)
+
+        return best_seq

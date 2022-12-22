@@ -56,7 +56,7 @@ class EncoderViT(nn.Module):
         `images`: (batch_size, #channel, height, width)
         '''
         features = self.vit(images).last_hidden_state # (batch_size, 197, 768)
-        features = features[:,0,:].squeeze() # (batch_size, 768) 2nd index (0) is used to index CLS token embedding
+        features = features[:,0,:].squeeze(1) # (batch_size, 768) 2nd index (0) is used to index CLS token embedding
         features = self.bn(self.embed(features)) # (batch_size, embed_size)
 
         return features

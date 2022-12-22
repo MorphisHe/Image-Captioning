@@ -23,7 +23,9 @@ def get_configs():
     decoder_params = {
         "embed_size": encoder_params["embed_size"],
         "hidden_size": 512,
-        "num_layers": 1
+        "num_layers": 1,
+        "use_beam_search": True,
+        "beam_size": 5
     }
 
     callback_params = {
