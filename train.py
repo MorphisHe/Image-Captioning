@@ -63,12 +63,12 @@ if __name__ == "__main__":
     train_ids, dev_ids, test_ids = get_data_split(dataset_params["image_dir"])
     train_dataloader, dev_dataloader, test_dataloader = get_dataloader(
         train_ids, dev_ids, test_ids, **dataset_params, vocab=vocab,
-        use_beam_search=use_beam_search, beam_size=beam_size,
         transform_train=transform_train, transform_test=transform_test
     )
 
     # get trainer
     trainer = Trainer(model, train_dataloader, dev_dataloader, test_dataloader, 
-                      train_params, callback_params, optimizer_params)
+                      train_params, callback_params, optimizer_params,
+                      use_beam_search=use_beam_search, beam_size=beam_size)
     trainer.train()
 

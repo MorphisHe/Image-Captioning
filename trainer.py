@@ -19,11 +19,11 @@ class Trainer:
         train_dataloader,
         dev_dataloader,
         test_dataloader,
-        use_beam_search,
-        beam_size,
         train_params,
         callback_params,
         optimizer_params,
+        use_beam_search,
+        beam_size
     ):
         self.use_beam_search = use_beam_search
         self.beam_size = beam_size
