@@ -14,7 +14,7 @@ class DecoderRNN(nn.Module):
 
         # create layers
         self.word_embedding = nn.Embedding(vocab_size, embed_size)
-        if self.use_gru:
+        if use_gru:
             self.lstm = nn.GRU(embed_size, hidden_size, num_layers, batch_first=True)
         else:    
             self.lstm = nn.LSTM(embed_size, hidden_size, num_layers, batch_first=True)
