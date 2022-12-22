@@ -11,10 +11,11 @@ class DecoderRNN(nn.Module):
         super(DecoderRNN, self).__init__()
         self.vocab_size = vocab_size
         self.hidden_size = hidden_size
+        self.use_gru = use_gru
 
         # create layers
         self.word_embedding = nn.Embedding(vocab_size, embed_size)
-        if use_gru:
+        if self.use_gru:
             self.lstm = nn.GRU(embed_size, hidden_size, num_layers, batch_first=True)
         else:    
             self.lstm = nn.LSTM(embed_size, hidden_size, num_layers, batch_first=True)
@@ -71,11 +72,17 @@ class DecoderRNN(nn.Module):
         `outputs` (batch_size, vocab_size)
         '''
         inputs = inputs[:,-1].squeeze() # (beam_size)
-        states = (states[0].squeeze().unsqueeze(0), states[1].squeeze().unsqueeze(0))
+        if self.use_gru:
+            states = states.squeeze().unsqueeze(0)
+        else:
+            states = (states[0].squeeze().unsqueeze(0), states[1].squeeze().unsqueeze(0))
         inputs = self.word_embedding(inputs) # inputs: (batch_size, embed_size)
         inputs = inputs.unsqueeze(1) # inputs: (batch_size, 1, embed_size)
         hiddens, states = self.lstm(inputs, states) # hiddens: (batch_size, 1, hidden_size)
-        states = (states[0].squeeze(), states[1].squeeze())
+        if self.use_gru:
+            states = states[0].squeeze()
+        else:
+            states = (states[0].squeeze(), states[1].squeeze())
         outputs = self.linear(hiddens.squeeze(1)) # outputs:  (batch_size, vocab_size)
 
         return outputs, states
