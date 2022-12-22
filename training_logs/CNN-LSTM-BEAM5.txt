@@ -1,0 +1,839 @@
+12/22/2022 04:37:58 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:37:58 PM Name                                                                   Weight Shape                   Total Parameters               Trainable                     
+12/22/2022 04:37:58 PM encoder.resnet.0.weight                                                torch.Size([64, 3, 7, 7])      9408                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.1.weight                                                torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.1.bias                                                  torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.conv1.weight                                        torch.Size([64, 64, 1, 1])     4096                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.bn1.weight                                          torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.bn1.bias                                            torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.conv2.weight                                        torch.Size([64, 64, 3, 3])     36864                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.bn2.weight                                          torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.bn2.bias                                            torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.conv3.weight                                        torch.Size([256, 64, 1, 1])    16384                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.bn3.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.bn3.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.downsample.0.weight                                 torch.Size([256, 64, 1, 1])    16384                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.downsample.1.weight                                 torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.0.downsample.1.bias                                   torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.conv1.weight                                        torch.Size([64, 256, 1, 1])    16384                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.bn1.weight                                          torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.bn1.bias                                            torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.conv2.weight                                        torch.Size([64, 64, 3, 3])     36864                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.bn2.weight                                          torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.bn2.bias                                            torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.conv3.weight                                        torch.Size([256, 64, 1, 1])    16384                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.bn3.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.1.bn3.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.conv1.weight                                        torch.Size([64, 256, 1, 1])    16384                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.bn1.weight                                          torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.bn1.bias                                            torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.conv2.weight                                        torch.Size([64, 64, 3, 3])     36864                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.bn2.weight                                          torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.bn2.bias                                            torch.Size([64])               64                             0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.conv3.weight                                        torch.Size([256, 64, 1, 1])    16384                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.bn3.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.4.2.bn3.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.conv1.weight                                        torch.Size([128, 256, 1, 1])   32768                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.bn1.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.bn1.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.conv2.weight                                        torch.Size([128, 128, 3, 3])   147456                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.bn2.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.bn2.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.conv3.weight                                        torch.Size([512, 128, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.bn3.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.bn3.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.downsample.0.weight                                 torch.Size([512, 256, 1, 1])   131072                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.downsample.1.weight                                 torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.0.downsample.1.bias                                   torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.conv1.weight                                        torch.Size([128, 512, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.bn1.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.bn1.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.conv2.weight                                        torch.Size([128, 128, 3, 3])   147456                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.bn2.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.bn2.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.conv3.weight                                        torch.Size([512, 128, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.bn3.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.1.bn3.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.conv1.weight                                        torch.Size([128, 512, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.bn1.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.bn1.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.conv2.weight                                        torch.Size([128, 128, 3, 3])   147456                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.bn2.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.bn2.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.conv3.weight                                        torch.Size([512, 128, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.bn3.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.2.bn3.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.conv1.weight                                        torch.Size([128, 512, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.bn1.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.bn1.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.conv2.weight                                        torch.Size([128, 128, 3, 3])   147456                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.bn2.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.bn2.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.conv3.weight                                        torch.Size([512, 128, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.bn3.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.3.bn3.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.conv1.weight                                        torch.Size([128, 512, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.bn1.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.bn1.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.conv2.weight                                        torch.Size([128, 128, 3, 3])   147456                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.bn2.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.bn2.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.conv3.weight                                        torch.Size([512, 128, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.bn3.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.4.bn3.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.conv1.weight                                        torch.Size([128, 512, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.bn1.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.bn1.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.conv2.weight                                        torch.Size([128, 128, 3, 3])   147456                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.bn2.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.bn2.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.conv3.weight                                        torch.Size([512, 128, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.bn3.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.5.bn3.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.conv1.weight                                        torch.Size([128, 512, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.bn1.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.bn1.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.conv2.weight                                        torch.Size([128, 128, 3, 3])   147456                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.bn2.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.bn2.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.conv3.weight                                        torch.Size([512, 128, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.bn3.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.6.bn3.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.conv1.weight                                        torch.Size([128, 512, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.bn1.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.bn1.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.conv2.weight                                        torch.Size([128, 128, 3, 3])   147456                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.bn2.weight                                          torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.bn2.bias                                            torch.Size([128])              128                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.conv3.weight                                        torch.Size([512, 128, 1, 1])   65536                          0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.bn3.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.5.7.bn3.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.conv1.weight                                        torch.Size([256, 512, 1, 1])   131072                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.downsample.0.weight                                 torch.Size([1024, 512, 1, 1])  524288                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.downsample.1.weight                                 torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.0.downsample.1.bias                                   torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.1.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.2.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.3.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.4.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.5.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.6.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.7.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.8.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.conv1.weight                                        torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.bn1.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.bn1.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.conv2.weight                                        torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.bn2.weight                                          torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.bn2.bias                                            torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.conv3.weight                                        torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.bn3.weight                                          torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.9.bn3.bias                                            torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.10.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.11.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.12.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.13.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.14.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.15.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.16.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.17.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.18.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.19.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.20.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.21.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.22.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.23.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.24.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.25.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.26.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.27.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.28.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.29.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.30.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.30.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.30.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.30.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.30.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:58 PM encoder.resnet.6.30.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.30.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.30.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.30.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.31.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.32.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.33.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.34.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.conv1.weight                                       torch.Size([256, 1024, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.bn1.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.bn1.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.conv2.weight                                       torch.Size([256, 256, 3, 3])   589824                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.bn2.weight                                         torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.bn2.bias                                           torch.Size([256])              256                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.conv3.weight                                       torch.Size([1024, 256, 1, 1])  262144                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.bn3.weight                                         torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.6.35.bn3.bias                                           torch.Size([1024])             1024                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.conv1.weight                                        torch.Size([512, 1024, 1, 1])  524288                         0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.bn1.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.bn1.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.conv2.weight                                        torch.Size([512, 512, 3, 3])   2359296                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.bn2.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.bn2.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.conv3.weight                                        torch.Size([2048, 512, 1, 1])  1048576                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.bn3.weight                                          torch.Size([2048])             2048                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.bn3.bias                                            torch.Size([2048])             2048                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.downsample.0.weight                                 torch.Size([2048, 1024, 1, 1]) 2097152                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.downsample.1.weight                                 torch.Size([2048])             2048                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.0.downsample.1.bias                                   torch.Size([2048])             2048                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.conv1.weight                                        torch.Size([512, 2048, 1, 1])  1048576                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.bn1.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.bn1.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.conv2.weight                                        torch.Size([512, 512, 3, 3])   2359296                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.bn2.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.bn2.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.conv3.weight                                        torch.Size([2048, 512, 1, 1])  1048576                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.bn3.weight                                          torch.Size([2048])             2048                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.1.bn3.bias                                            torch.Size([2048])             2048                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.conv1.weight                                        torch.Size([512, 2048, 1, 1])  1048576                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.bn1.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.bn1.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.conv2.weight                                        torch.Size([512, 512, 3, 3])   2359296                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.bn2.weight                                          torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.bn2.bias                                            torch.Size([512])              512                            0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.conv3.weight                                        torch.Size([2048, 512, 1, 1])  1048576                        0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.bn3.weight                                          torch.Size([2048])             2048                           0                             
+12/22/2022 04:37:59 PM encoder.resnet.7.2.bn3.bias                                            torch.Size([2048])             2048                           0                             
+12/22/2022 04:37:59 PM encoder.embed.weight                                                   torch.Size([512, 2048])        1048576                        1                             
+12/22/2022 04:37:59 PM encoder.embed.bias                                                     torch.Size([512])              512                            1                             
+12/22/2022 04:37:59 PM encoder.bn.weight                                                      torch.Size([512])              512                            1                             
+12/22/2022 04:37:59 PM encoder.bn.bias                                                        torch.Size([512])              512                            1                             
+12/22/2022 04:37:59 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:37:59 PM Name                                                                   Weight Shape                   Total Parameters               Trainable                     
+12/22/2022 04:37:59 PM decoder.word_embedding.weight                                          torch.Size([2959, 512])        1515008                        1                             
+12/22/2022 04:37:59 PM decoder.lstm.weight_ih_l0                                              torch.Size([2048, 512])        1048576                        1                             
+12/22/2022 04:37:59 PM decoder.lstm.weight_hh_l0                                              torch.Size([2048, 512])        1048576                        1                             
+12/22/2022 04:37:59 PM decoder.lstm.bias_ih_l0                                                torch.Size([2048])             2048                           1                             
+12/22/2022 04:37:59 PM decoder.lstm.bias_hh_l0                                                torch.Size([2048])             2048                           1                             
+12/22/2022 04:37:59 PM decoder.linear.weight                                                  torch.Size([2959, 512])        1515008                        1                             
+12/22/2022 04:37:59 PM decoder.linear.bias                                                    torch.Size([2959])             2959                           1                             
+12/22/2022 04:37:59 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:37:59 PM Total Number of Paramters: 64328143
+12/22/2022 04:37:59 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:37:59 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:37:59 PM Training Dataset Size: 6472
+12/22/2022 04:37:59 PM Training Dataset Total Batch#: 51
+12/22/2022 04:37:59 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:37:59 PM Dev Dataset Size: 809
+12/22/2022 04:37:59 PM Dev Dataset Total Batch#: 809
+12/22/2022 04:37:59 PM Test Dataset Size: 810
+12/22/2022 04:37:59 PM Test Dataset Total Batch#: 810
+12/22/2022 04:38:03 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:38:03 PM Trainer Kwargs:
+12/22/2022 04:38:03 PM 
+12/22/2022 04:38:03 PM device                         cuda
+12/22/2022 04:38:03 PM max_epoch                      100
+12/22/2022 04:38:03 PM output_dir                     outputs
+12/22/2022 04:38:03 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:38:03 PM Optimizer: {'lr': 0.001, 'type': 'Adam', 'kwargs': {'weight_decay': 0, 'amsgrad': True}}
+12/22/2022 04:38:03 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:38:03 PM Callbacks: EarlyStopping
+12/22/2022 04:38:03 PM 
+12/22/2022 04:38:03 PM save_final_model               True
+12/22/2022 04:38:03 PM patience                       10
+12/22/2022 04:38:03 PM threshold                      0.0001
+12/22/2022 04:38:03 PM mode                           max
+12/22/2022 04:38:03 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:38:18 PM Epoch 0 - iter 4/51 - 10% Avg loss 7.61611
+12/22/2022 04:38:28 PM Epoch 0 - iter 9/51 - 10% Avg loss 5.82762
+12/22/2022 04:38:37 PM Epoch 0 - iter 14/51 - 10% Avg loss 5.03123
+12/22/2022 04:38:47 PM Epoch 0 - iter 19/51 - 10% Avg loss 4.74368
+12/22/2022 04:38:58 PM Epoch 0 - iter 24/51 - 10% Avg loss 4.47756
+12/22/2022 04:39:08 PM Epoch 0 - iter 29/51 - 10% Avg loss 4.23034
+12/22/2022 04:39:18 PM Epoch 0 - iter 34/51 - 10% Avg loss 4.10203
+12/22/2022 04:39:28 PM Epoch 0 - iter 39/51 - 10% Avg loss 3.92955
+12/22/2022 04:39:38 PM Epoch 0 - iter 44/51 - 10% Avg loss 3.84848
+12/22/2022 04:39:49 PM Epoch 0 - iter 49/51 - 10% Avg loss 3.78085
+12/22/2022 04:39:50 PM Epoch #0: Epoch Average Loss 4.73625 - Epoch Training Time: 1.8 min(s)
+12/22/2022 04:39:50 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:40:50 PM Eval Devset: Epoch #0: Average Loss 3.62616 - BLEU-1: 0.60320 - BLEU-2: 0.36336 - BLEU-3: 0.20281 - BLEU-4: 0.12939 - ROUGE_L: 0.46106 - METEOR: 0.32399 - CIDEr: 0.16289 - SPICE: 0.00000 - Epoch Testing Time: 0.99 min(s)
+12/22/2022 04:40:50 PM Saving new best-model with accuracy: 0.1294
+12/22/2022 04:40:51 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:41:01 PM Epoch 1 - iter 4/51 - 10% Avg loss 3.56538
+12/22/2022 04:41:11 PM Epoch 1 - iter 9/51 - 10% Avg loss 3.51258
+12/22/2022 04:41:22 PM Epoch 1 - iter 14/51 - 10% Avg loss 3.54362
+12/22/2022 04:41:32 PM Epoch 1 - iter 19/51 - 10% Avg loss 3.43041
+12/22/2022 04:41:42 PM Epoch 1 - iter 24/51 - 10% Avg loss 3.49094
+12/22/2022 04:41:52 PM Epoch 1 - iter 29/51 - 10% Avg loss 3.37844
+12/22/2022 04:42:03 PM Epoch 1 - iter 34/51 - 10% Avg loss 3.41500
+12/22/2022 04:42:13 PM Epoch 1 - iter 39/51 - 10% Avg loss 3.34312
+12/22/2022 04:42:23 PM Epoch 1 - iter 44/51 - 10% Avg loss 3.32907
+12/22/2022 04:42:33 PM Epoch 1 - iter 49/51 - 10% Avg loss 3.30751
+12/22/2022 04:42:34 PM Epoch #1: Epoch Average Loss 3.42337 - Epoch Training Time: 1.7 min(s)
+12/22/2022 04:42:35 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:43:32 PM Eval Devset: Epoch #1: Average Loss 3.24248 - BLEU-1: 0.58012 - BLEU-2: 0.35062 - BLEU-3: 0.20640 - BLEU-4: 0.13577 - ROUGE_L: 0.45019 - METEOR: 0.32568 - CIDEr: 0.19815 - SPICE: 0.00000 - Epoch Testing Time: 0.95 min(s)
+12/22/2022 04:43:32 PM Saving new best-model with accuracy: 0.1358
+12/22/2022 04:43:33 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:43:43 PM Epoch 2 - iter 4/51 - 10% Avg loss 3.12861
+12/22/2022 04:43:54 PM Epoch 2 - iter 9/51 - 10% Avg loss 3.17001
+12/22/2022 04:44:04 PM Epoch 2 - iter 14/51 - 10% Avg loss 3.18873
+12/22/2022 04:44:14 PM Epoch 2 - iter 19/51 - 10% Avg loss 3.10176
+12/22/2022 04:44:25 PM Epoch 2 - iter 24/51 - 10% Avg loss 3.11251
+12/22/2022 04:44:35 PM Epoch 2 - iter 29/51 - 10% Avg loss 3.10366
+12/22/2022 04:44:45 PM Epoch 2 - iter 34/51 - 10% Avg loss 3.08431
+12/22/2022 04:44:55 PM Epoch 2 - iter 39/51 - 10% Avg loss 3.10277
+12/22/2022 04:45:05 PM Epoch 2 - iter 44/51 - 10% Avg loss 3.01298
+12/22/2022 04:45:16 PM Epoch 2 - iter 49/51 - 10% Avg loss 3.07060
+12/22/2022 04:45:17 PM Epoch #2: Epoch Average Loss 3.10674 - Epoch Training Time: 1.7 min(s)
+12/22/2022 04:45:18 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:46:17 PM Eval Devset: Epoch #2: Average Loss 3.07430 - BLEU-1: 0.57853 - BLEU-2: 0.35952 - BLEU-3: 0.21999 - BLEU-4: 0.14178 - ROUGE_L: 0.46827 - METEOR: 0.32952 - CIDEr: 0.19057 - SPICE: 0.00000 - Epoch Testing Time: 0.99 min(s)
+12/22/2022 04:46:17 PM Saving new best-model with accuracy: 0.1418
+12/22/2022 04:46:17 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:46:28 PM Epoch 3 - iter 4/51 - 10% Avg loss 2.90466
+12/22/2022 04:46:38 PM Epoch 3 - iter 9/51 - 10% Avg loss 2.92474
+12/22/2022 04:46:48 PM Epoch 3 - iter 14/51 - 10% Avg loss 2.93037
+12/22/2022 04:46:59 PM Epoch 3 - iter 19/51 - 10% Avg loss 2.87554
+12/22/2022 04:47:09 PM Epoch 3 - iter 24/51 - 10% Avg loss 2.95369
+12/22/2022 04:47:19 PM Epoch 3 - iter 29/51 - 10% Avg loss 2.92537
+12/22/2022 04:47:29 PM Epoch 3 - iter 34/51 - 10% Avg loss 2.87255
+12/22/2022 04:47:39 PM Epoch 3 - iter 39/51 - 10% Avg loss 2.83745
+12/22/2022 04:47:49 PM Epoch 3 - iter 44/51 - 10% Avg loss 2.87772
+12/22/2022 04:48:00 PM Epoch 3 - iter 49/51 - 10% Avg loss 2.90324
+12/22/2022 04:48:01 PM Epoch #3: Epoch Average Loss 2.90015 - Epoch Training Time: 1.7 min(s)
+12/22/2022 04:48:02 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:49:00 PM Eval Devset: Epoch #3: Average Loss 2.98048 - BLEU-1: 0.57990 - BLEU-2: 0.35727 - BLEU-3: 0.20827 - BLEU-4: 0.13722 - ROUGE_L: 0.45607 - METEOR: 0.32778 - CIDEr: 0.18954 - SPICE: 0.00000 - Epoch Testing Time: 0.96 min(s)
+12/22/2022 04:49:00 PM 
+12/22/2022 04:49:00 PM Bad Epoch. Total num bad epoch: 1
+12/22/2022 04:49:00 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:49:10 PM Epoch 4 - iter 4/51 - 10% Avg loss 2.78165
+12/22/2022 04:49:20 PM Epoch 4 - iter 9/51 - 10% Avg loss 2.71479
+12/22/2022 04:49:31 PM Epoch 4 - iter 14/51 - 10% Avg loss 2.75821
+12/22/2022 04:49:41 PM Epoch 4 - iter 19/51 - 10% Avg loss 2.72893
+12/22/2022 04:49:51 PM Epoch 4 - iter 24/51 - 10% Avg loss 2.74296
+12/22/2022 04:50:01 PM Epoch 4 - iter 29/51 - 10% Avg loss 2.72050
+12/22/2022 04:50:11 PM Epoch 4 - iter 34/51 - 10% Avg loss 2.77738
+12/22/2022 04:50:21 PM Epoch 4 - iter 39/51 - 10% Avg loss 2.73463
+12/22/2022 04:50:31 PM Epoch 4 - iter 44/51 - 10% Avg loss 2.67518
+12/22/2022 04:50:42 PM Epoch 4 - iter 49/51 - 10% Avg loss 2.72501
+12/22/2022 04:50:43 PM Epoch #4: Epoch Average Loss 2.73399 - Epoch Training Time: 1.7 min(s)
+12/22/2022 04:50:43 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:51:44 PM Eval Devset: Epoch #4: Average Loss 2.90125 - BLEU-1: 0.58687 - BLEU-2: 0.37721 - BLEU-3: 0.23979 - BLEU-4: 0.15999 - ROUGE_L: 0.48515 - METEOR: 0.33318 - CIDEr: 0.22627 - SPICE: 0.00000 - Epoch Testing Time: 1.0 min(s)
+12/22/2022 04:51:44 PM Saving new best-model with accuracy: 0.1600
+12/22/2022 04:51:45 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:51:56 PM Epoch 5 - iter 4/51 - 10% Avg loss 2.58567
+12/22/2022 04:52:06 PM Epoch 5 - iter 9/51 - 10% Avg loss 2.57936
+12/22/2022 04:52:17 PM Epoch 5 - iter 14/51 - 10% Avg loss 2.60743
+12/22/2022 04:52:27 PM Epoch 5 - iter 19/51 - 10% Avg loss 2.58030
+12/22/2022 04:52:37 PM Epoch 5 - iter 24/51 - 10% Avg loss 2.57682
+12/22/2022 04:52:47 PM Epoch 5 - iter 29/51 - 10% Avg loss 2.60638
+12/22/2022 04:52:57 PM Epoch 5 - iter 34/51 - 10% Avg loss 2.56929
+12/22/2022 04:53:08 PM Epoch 5 - iter 39/51 - 10% Avg loss 2.59436
+12/22/2022 04:53:18 PM Epoch 5 - iter 44/51 - 10% Avg loss 2.64447
+12/22/2022 04:53:28 PM Epoch 5 - iter 49/51 - 10% Avg loss 2.57289
+12/22/2022 04:53:29 PM Epoch #5: Epoch Average Loss 2.59068 - Epoch Training Time: 1.7 min(s)
+12/22/2022 04:53:30 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:54:30 PM Eval Devset: Epoch #5: Average Loss 2.85784 - BLEU-1: 0.60296 - BLEU-2: 0.39139 - BLEU-3: 0.25335 - BLEU-4: 0.16999 - ROUGE_L: 0.49214 - METEOR: 0.33784 - CIDEr: 0.25233 - SPICE: 0.00000 - Epoch Testing Time: 1.0 min(s)
+12/22/2022 04:54:30 PM Saving new best-model with accuracy: 0.1700
+12/22/2022 04:54:31 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:54:41 PM Epoch 6 - iter 4/51 - 10% Avg loss 2.42122
+12/22/2022 04:54:52 PM Epoch 6 - iter 9/51 - 10% Avg loss 2.42170
+12/22/2022 04:55:02 PM Epoch 6 - iter 14/51 - 10% Avg loss 2.47022
+12/22/2022 04:55:12 PM Epoch 6 - iter 19/51 - 10% Avg loss 2.48873
+12/22/2022 04:55:22 PM Epoch 6 - iter 24/51 - 10% Avg loss 2.45352
+12/22/2022 04:55:32 PM Epoch 6 - iter 29/51 - 10% Avg loss 2.48760
+12/22/2022 04:55:43 PM Epoch 6 - iter 34/51 - 10% Avg loss 2.45492
+12/22/2022 04:55:53 PM Epoch 6 - iter 39/51 - 10% Avg loss 2.41926
+12/22/2022 04:56:03 PM Epoch 6 - iter 44/51 - 10% Avg loss 2.46653
+12/22/2022 04:56:13 PM Epoch 6 - iter 49/51 - 10% Avg loss 2.49243
+12/22/2022 04:56:14 PM Epoch #6: Epoch Average Loss 2.45789 - Epoch Training Time: 1.7 min(s)
+12/22/2022 04:56:15 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:57:14 PM Eval Devset: Epoch #6: Average Loss 2.82162 - BLEU-1: 0.60951 - BLEU-2: 0.39514 - BLEU-3: 0.25060 - BLEU-4: 0.16601 - ROUGE_L: 0.49413 - METEOR: 0.33932 - CIDEr: 0.24275 - SPICE: 0.00000 - Epoch Testing Time: 0.99 min(s)
+12/22/2022 04:57:14 PM 
+12/22/2022 04:57:14 PM Bad Epoch. Total num bad epoch: 1
+12/22/2022 04:57:14 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:57:25 PM Epoch 7 - iter 4/51 - 10% Avg loss 2.26059
+12/22/2022 04:57:35 PM Epoch 7 - iter 9/51 - 10% Avg loss 2.34408
+12/22/2022 04:57:46 PM Epoch 7 - iter 14/51 - 10% Avg loss 2.33719
+12/22/2022 04:57:56 PM Epoch 7 - iter 19/51 - 10% Avg loss 2.32034
+12/22/2022 04:58:06 PM Epoch 7 - iter 24/51 - 10% Avg loss 2.31867
+12/22/2022 04:58:16 PM Epoch 7 - iter 29/51 - 10% Avg loss 2.34836
+12/22/2022 04:58:26 PM Epoch 7 - iter 34/51 - 10% Avg loss 2.37099
+12/22/2022 04:58:36 PM Epoch 7 - iter 39/51 - 10% Avg loss 2.36714
+12/22/2022 04:58:46 PM Epoch 7 - iter 44/51 - 10% Avg loss 2.37354
+12/22/2022 04:58:56 PM Epoch 7 - iter 49/51 - 10% Avg loss 2.33069
+12/22/2022 04:58:58 PM Epoch #7: Epoch Average Loss 2.33593 - Epoch Training Time: 1.7 min(s)
+12/22/2022 04:58:58 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 04:59:59 PM Eval Devset: Epoch #7: Average Loss 2.79702 - BLEU-1: 0.61618 - BLEU-2: 0.40981 - BLEU-3: 0.26943 - BLEU-4: 0.18270 - ROUGE_L: 0.50249 - METEOR: 0.34290 - CIDEr: 0.28791 - SPICE: 0.00000 - Epoch Testing Time: 1.0 min(s)
+12/22/2022 04:59:59 PM Saving new best-model with accuracy: 0.1827
+12/22/2022 04:59:59 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:00:10 PM Epoch 8 - iter 4/51 - 10% Avg loss 2.19182
+12/22/2022 05:00:20 PM Epoch 8 - iter 9/51 - 10% Avg loss 2.21501
+12/22/2022 05:00:30 PM Epoch 8 - iter 14/51 - 10% Avg loss 2.19952
+12/22/2022 05:00:40 PM Epoch 8 - iter 19/51 - 10% Avg loss 2.19617
+12/22/2022 05:00:50 PM Epoch 8 - iter 24/51 - 10% Avg loss 2.21278
+12/22/2022 05:01:01 PM Epoch 8 - iter 29/51 - 10% Avg loss 2.22323
+12/22/2022 05:01:11 PM Epoch 8 - iter 34/51 - 10% Avg loss 2.23554
+12/22/2022 05:01:21 PM Epoch 8 - iter 39/51 - 10% Avg loss 2.24253
+12/22/2022 05:01:31 PM Epoch 8 - iter 44/51 - 10% Avg loss 2.22808
+12/22/2022 05:01:41 PM Epoch 8 - iter 49/51 - 10% Avg loss 2.24003
+12/22/2022 05:01:42 PM Epoch #8: Epoch Average Loss 2.21788 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:01:43 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:02:42 PM Eval Devset: Epoch #8: Average Loss 2.78486 - BLEU-1: 0.59774 - BLEU-2: 0.38990 - BLEU-3: 0.25324 - BLEU-4: 0.17053 - ROUGE_L: 0.49260 - METEOR: 0.33977 - CIDEr: 0.26196 - SPICE: 0.00000 - Epoch Testing Time: 0.98 min(s)
+12/22/2022 05:02:42 PM 
+12/22/2022 05:02:42 PM Bad Epoch. Total num bad epoch: 1
+12/22/2022 05:02:42 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:02:52 PM Epoch 9 - iter 4/51 - 10% Avg loss 2.07686
+12/22/2022 05:03:03 PM Epoch 9 - iter 9/51 - 10% Avg loss 2.08048
+12/22/2022 05:03:13 PM Epoch 9 - iter 14/51 - 10% Avg loss 2.11950
+12/22/2022 05:03:23 PM Epoch 9 - iter 19/51 - 10% Avg loss 2.09429
+12/22/2022 05:03:33 PM Epoch 9 - iter 24/51 - 10% Avg loss 2.08779
+12/22/2022 05:03:43 PM Epoch 9 - iter 29/51 - 10% Avg loss 2.09769
+12/22/2022 05:03:54 PM Epoch 9 - iter 34/51 - 10% Avg loss 2.09882
+12/22/2022 05:04:04 PM Epoch 9 - iter 39/51 - 10% Avg loss 2.15753
+12/22/2022 05:04:14 PM Epoch 9 - iter 44/51 - 10% Avg loss 2.09551
+12/22/2022 05:04:24 PM Epoch 9 - iter 49/51 - 10% Avg loss 2.16097
+12/22/2022 05:04:25 PM Epoch #9: Epoch Average Loss 2.10829 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:04:26 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:05:24 PM Eval Devset: Epoch #9: Average Loss 2.77928 - BLEU-1: 0.62826 - BLEU-2: 0.42200 - BLEU-3: 0.28302 - BLEU-4: 0.19428 - ROUGE_L: 0.50806 - METEOR: 0.34780 - CIDEr: 0.32020 - SPICE: 0.00000 - Epoch Testing Time: 0.97 min(s)
+12/22/2022 05:05:24 PM Saving new best-model with accuracy: 0.1943
+12/22/2022 05:05:25 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:05:36 PM Epoch 10 - iter 4/51 - 10% Avg loss 1.97128
+12/22/2022 05:05:46 PM Epoch 10 - iter 9/51 - 10% Avg loss 1.98969
+12/22/2022 05:05:56 PM Epoch 10 - iter 14/51 - 10% Avg loss 1.97148
+12/22/2022 05:06:06 PM Epoch 10 - iter 19/51 - 10% Avg loss 1.99401
+12/22/2022 05:06:16 PM Epoch 10 - iter 24/51 - 10% Avg loss 1.99435
+12/22/2022 05:06:27 PM Epoch 10 - iter 29/51 - 10% Avg loss 2.00132
+12/22/2022 05:06:37 PM Epoch 10 - iter 34/51 - 10% Avg loss 2.00316
+12/22/2022 05:06:47 PM Epoch 10 - iter 39/51 - 10% Avg loss 2.00532
+12/22/2022 05:06:57 PM Epoch 10 - iter 44/51 - 10% Avg loss 2.03956
+12/22/2022 05:07:07 PM Epoch 10 - iter 49/51 - 10% Avg loss 2.03575
+12/22/2022 05:07:09 PM Epoch #10: Epoch Average Loss 2.00091 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:07:10 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:08:07 PM Eval Devset: Epoch #10: Average Loss 2.76808 - BLEU-1: 0.64584 - BLEU-2: 0.43964 - BLEU-3: 0.29479 - BLEU-4: 0.20373 - ROUGE_L: 0.51610 - METEOR: 0.34572 - CIDEr: 0.32523 - SPICE: 0.00000 - Epoch Testing Time: 0.96 min(s)
+12/22/2022 05:08:07 PM Saving new best-model with accuracy: 0.2037
+12/22/2022 05:08:08 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:08:19 PM Epoch 11 - iter 4/51 - 10% Avg loss 1.86957
+12/22/2022 05:08:29 PM Epoch 11 - iter 9/51 - 10% Avg loss 1.87815
+12/22/2022 05:08:39 PM Epoch 11 - iter 14/51 - 10% Avg loss 1.86496
+12/22/2022 05:08:49 PM Epoch 11 - iter 19/51 - 10% Avg loss 1.88926
+12/22/2022 05:08:59 PM Epoch 11 - iter 24/51 - 10% Avg loss 1.89902
+12/22/2022 05:09:10 PM Epoch 11 - iter 29/51 - 10% Avg loss 1.88576
+12/22/2022 05:09:20 PM Epoch 11 - iter 34/51 - 10% Avg loss 1.91512
+12/22/2022 05:09:30 PM Epoch 11 - iter 39/51 - 10% Avg loss 1.93692
+12/22/2022 05:09:40 PM Epoch 11 - iter 44/51 - 10% Avg loss 1.90841
+12/22/2022 05:09:50 PM Epoch 11 - iter 49/51 - 10% Avg loss 1.88797
+12/22/2022 05:09:51 PM Epoch #11: Epoch Average Loss 1.89474 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:09:52 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:10:50 PM Eval Devset: Epoch #11: Average Loss 2.77510 - BLEU-1: 0.63503 - BLEU-2: 0.42551 - BLEU-3: 0.28263 - BLEU-4: 0.19195 - ROUGE_L: 0.50961 - METEOR: 0.34619 - CIDEr: 0.30947 - SPICE: 0.00000 - Epoch Testing Time: 0.97 min(s)
+12/22/2022 05:10:50 PM 
+12/22/2022 05:10:50 PM Bad Epoch. Total num bad epoch: 1
+12/22/2022 05:10:50 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:11:00 PM Epoch 12 - iter 4/51 - 10% Avg loss 1.76256
+12/22/2022 05:11:11 PM Epoch 12 - iter 9/51 - 10% Avg loss 1.73975
+12/22/2022 05:11:21 PM Epoch 12 - iter 14/51 - 10% Avg loss 1.78495
+12/22/2022 05:11:31 PM Epoch 12 - iter 19/51 - 10% Avg loss 1.77978
+12/22/2022 05:11:41 PM Epoch 12 - iter 24/51 - 10% Avg loss 1.77378
+12/22/2022 05:11:52 PM Epoch 12 - iter 29/51 - 10% Avg loss 1.78862
+12/22/2022 05:12:02 PM Epoch 12 - iter 34/51 - 10% Avg loss 1.81831
+12/22/2022 05:12:12 PM Epoch 12 - iter 39/51 - 10% Avg loss 1.80401
+12/22/2022 05:12:22 PM Epoch 12 - iter 44/51 - 10% Avg loss 1.82637
+12/22/2022 05:12:32 PM Epoch 12 - iter 49/51 - 10% Avg loss 1.83097
+12/22/2022 05:12:34 PM Epoch #12: Epoch Average Loss 1.79201 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:12:34 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:13:31 PM Eval Devset: Epoch #12: Average Loss 2.77958 - BLEU-1: 0.63532 - BLEU-2: 0.43107 - BLEU-3: 0.29153 - BLEU-4: 0.20194 - ROUGE_L: 0.51512 - METEOR: 0.34823 - CIDEr: 0.30589 - SPICE: 0.00000 - Epoch Testing Time: 0.95 min(s)
+12/22/2022 05:13:31 PM 
+12/22/2022 05:13:31 PM Bad Epoch. Total num bad epoch: 2
+12/22/2022 05:13:31 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:13:42 PM Epoch 13 - iter 4/51 - 10% Avg loss 1.64983
+12/22/2022 05:13:52 PM Epoch 13 - iter 9/51 - 10% Avg loss 1.66651
+12/22/2022 05:14:03 PM Epoch 13 - iter 14/51 - 10% Avg loss 1.66473
+12/22/2022 05:14:13 PM Epoch 13 - iter 19/51 - 10% Avg loss 1.64291
+12/22/2022 05:14:23 PM Epoch 13 - iter 24/51 - 10% Avg loss 1.70087
+12/22/2022 05:14:33 PM Epoch 13 - iter 29/51 - 10% Avg loss 1.69856
+12/22/2022 05:14:43 PM Epoch 13 - iter 34/51 - 10% Avg loss 1.72498
+12/22/2022 05:14:53 PM Epoch 13 - iter 39/51 - 10% Avg loss 1.75261
+12/22/2022 05:15:04 PM Epoch 13 - iter 44/51 - 10% Avg loss 1.71136
+12/22/2022 05:15:14 PM Epoch 13 - iter 49/51 - 10% Avg loss 1.71759
+12/22/2022 05:15:15 PM Epoch #13: Epoch Average Loss 1.69481 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:15:16 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:16:14 PM Eval Devset: Epoch #13: Average Loss 2.81021 - BLEU-1: 0.62528 - BLEU-2: 0.42522 - BLEU-3: 0.28958 - BLEU-4: 0.20281 - ROUGE_L: 0.51475 - METEOR: 0.34625 - CIDEr: 0.32109 - SPICE: 0.00000 - Epoch Testing Time: 0.97 min(s)
+12/22/2022 05:16:14 PM 
+12/22/2022 05:16:14 PM Bad Epoch. Total num bad epoch: 3
+12/22/2022 05:16:14 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:16:24 PM Epoch 14 - iter 4/51 - 10% Avg loss 1.57137
+12/22/2022 05:16:34 PM Epoch 14 - iter 9/51 - 10% Avg loss 1.58255
+12/22/2022 05:16:45 PM Epoch 14 - iter 14/51 - 10% Avg loss 1.58071
+12/22/2022 05:16:55 PM Epoch 14 - iter 19/51 - 10% Avg loss 1.57599
+12/22/2022 05:17:05 PM Epoch 14 - iter 24/51 - 10% Avg loss 1.60728
+12/22/2022 05:17:15 PM Epoch 14 - iter 29/51 - 10% Avg loss 1.58798
+12/22/2022 05:17:25 PM Epoch 14 - iter 34/51 - 10% Avg loss 1.61760
+12/22/2022 05:17:35 PM Epoch 14 - iter 39/51 - 10% Avg loss 1.61710
+12/22/2022 05:17:46 PM Epoch 14 - iter 44/51 - 10% Avg loss 1.61008
+12/22/2022 05:17:56 PM Epoch 14 - iter 49/51 - 10% Avg loss 1.62220
+12/22/2022 05:17:57 PM Epoch #14: Epoch Average Loss 1.59815 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:17:58 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:18:56 PM Eval Devset: Epoch #14: Average Loss 2.81697 - BLEU-1: 0.63146 - BLEU-2: 0.42852 - BLEU-3: 0.28880 - BLEU-4: 0.19991 - ROUGE_L: 0.51421 - METEOR: 0.34674 - CIDEr: 0.32817 - SPICE: 0.00000 - Epoch Testing Time: 0.97 min(s)
+12/22/2022 05:18:56 PM 
+12/22/2022 05:18:56 PM Bad Epoch. Total num bad epoch: 4
+12/22/2022 05:18:56 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:19:06 PM Epoch 15 - iter 4/51 - 10% Avg loss 1.47110
+12/22/2022 05:19:17 PM Epoch 15 - iter 9/51 - 10% Avg loss 1.46894
+12/22/2022 05:19:27 PM Epoch 15 - iter 14/51 - 10% Avg loss 1.48244
+12/22/2022 05:19:37 PM Epoch 15 - iter 19/51 - 10% Avg loss 1.48899
+12/22/2022 05:19:47 PM Epoch 15 - iter 24/51 - 10% Avg loss 1.50349
+12/22/2022 05:19:57 PM Epoch 15 - iter 29/51 - 10% Avg loss 1.51532
+12/22/2022 05:20:07 PM Epoch 15 - iter 34/51 - 10% Avg loss 1.51527
+12/22/2022 05:20:17 PM Epoch 15 - iter 39/51 - 10% Avg loss 1.55218
+12/22/2022 05:20:28 PM Epoch 15 - iter 44/51 - 10% Avg loss 1.51273
+12/22/2022 05:20:38 PM Epoch 15 - iter 49/51 - 10% Avg loss 1.52322
+12/22/2022 05:20:39 PM Epoch #15: Epoch Average Loss 1.50395 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:20:40 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:21:38 PM Eval Devset: Epoch #15: Average Loss 2.83769 - BLEU-1: 0.61763 - BLEU-2: 0.41294 - BLEU-3: 0.27570 - BLEU-4: 0.19009 - ROUGE_L: 0.50747 - METEOR: 0.34260 - CIDEr: 0.28815 - SPICE: 0.00000 - Epoch Testing Time: 0.97 min(s)
+12/22/2022 05:21:38 PM 
+12/22/2022 05:21:38 PM Bad Epoch. Total num bad epoch: 5
+12/22/2022 05:21:38 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:21:48 PM Epoch 16 - iter 4/51 - 10% Avg loss 1.36939
+12/22/2022 05:21:58 PM Epoch 16 - iter 9/51 - 10% Avg loss 1.37651
+12/22/2022 05:22:09 PM Epoch 16 - iter 14/51 - 10% Avg loss 1.39276
+12/22/2022 05:22:19 PM Epoch 16 - iter 19/51 - 10% Avg loss 1.40490
+12/22/2022 05:22:29 PM Epoch 16 - iter 24/51 - 10% Avg loss 1.41657
+12/22/2022 05:22:39 PM Epoch 16 - iter 29/51 - 10% Avg loss 1.39705
+12/22/2022 05:22:49 PM Epoch 16 - iter 34/51 - 10% Avg loss 1.42600
+12/22/2022 05:22:59 PM Epoch 16 - iter 39/51 - 10% Avg loss 1.44853
+12/22/2022 05:23:10 PM Epoch 16 - iter 44/51 - 10% Avg loss 1.44276
+12/22/2022 05:23:20 PM Epoch 16 - iter 49/51 - 10% Avg loss 1.44258
+12/22/2022 05:23:21 PM Epoch #16: Epoch Average Loss 1.41142 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:23:22 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:24:18 PM Eval Devset: Epoch #16: Average Loss 2.86277 - BLEU-1: 0.62937 - BLEU-2: 0.42049 - BLEU-3: 0.27695 - BLEU-4: 0.18671 - ROUGE_L: 0.51200 - METEOR: 0.34402 - CIDEr: 0.28183 - SPICE: 0.00000 - Epoch Testing Time: 0.95 min(s)
+12/22/2022 05:24:18 PM 
+12/22/2022 05:24:18 PM Bad Epoch. Total num bad epoch: 6
+12/22/2022 05:24:18 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:24:29 PM Epoch 17 - iter 4/51 - 10% Avg loss 1.29783
+12/22/2022 05:24:39 PM Epoch 17 - iter 9/51 - 10% Avg loss 1.29076
+12/22/2022 05:24:50 PM Epoch 17 - iter 14/51 - 10% Avg loss 1.28977
+12/22/2022 05:25:00 PM Epoch 17 - iter 19/51 - 10% Avg loss 1.30681
+12/22/2022 05:25:10 PM Epoch 17 - iter 24/51 - 10% Avg loss 1.31787
+12/22/2022 05:25:20 PM Epoch 17 - iter 29/51 - 10% Avg loss 1.36262
+12/22/2022 05:25:30 PM Epoch 17 - iter 34/51 - 10% Avg loss 1.34564
+12/22/2022 05:25:40 PM Epoch 17 - iter 39/51 - 10% Avg loss 1.32826
+12/22/2022 05:25:51 PM Epoch 17 - iter 44/51 - 10% Avg loss 1.34146
+12/22/2022 05:26:01 PM Epoch 17 - iter 49/51 - 10% Avg loss 1.35485
+12/22/2022 05:26:02 PM Epoch #17: Epoch Average Loss 1.32445 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:26:03 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:27:00 PM Eval Devset: Epoch #17: Average Loss 2.90881 - BLEU-1: 0.62162 - BLEU-2: 0.41937 - BLEU-3: 0.28086 - BLEU-4: 0.19184 - ROUGE_L: 0.50990 - METEOR: 0.34468 - CIDEr: 0.29904 - SPICE: 0.00000 - Epoch Testing Time: 0.96 min(s)
+12/22/2022 05:27:00 PM 
+12/22/2022 05:27:00 PM Bad Epoch. Total num bad epoch: 7
+12/22/2022 05:27:00 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:27:11 PM Epoch 18 - iter 4/51 - 10% Avg loss 1.18583
+12/22/2022 05:27:21 PM Epoch 18 - iter 9/51 - 10% Avg loss 1.21986
+12/22/2022 05:27:31 PM Epoch 18 - iter 14/51 - 10% Avg loss 1.23189
+12/22/2022 05:27:42 PM Epoch 18 - iter 19/51 - 10% Avg loss 1.21465
+12/22/2022 05:27:52 PM Epoch 18 - iter 24/51 - 10% Avg loss 1.23979
+12/22/2022 05:28:02 PM Epoch 18 - iter 29/51 - 10% Avg loss 1.23953
+12/22/2022 05:28:12 PM Epoch 18 - iter 34/51 - 10% Avg loss 1.24813
+12/22/2022 05:28:22 PM Epoch 18 - iter 39/51 - 10% Avg loss 1.26596
+12/22/2022 05:28:33 PM Epoch 18 - iter 44/51 - 10% Avg loss 1.28349
+12/22/2022 05:28:43 PM Epoch 18 - iter 49/51 - 10% Avg loss 1.27764
+12/22/2022 05:28:44 PM Epoch #18: Epoch Average Loss 1.24070 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:28:45 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:29:43 PM Eval Devset: Epoch #18: Average Loss 2.93170 - BLEU-1: 0.61291 - BLEU-2: 0.40631 - BLEU-3: 0.26918 - BLEU-4: 0.18163 - ROUGE_L: 0.50613 - METEOR: 0.34113 - CIDEr: 0.28883 - SPICE: 0.00000 - Epoch Testing Time: 0.97 min(s)
+12/22/2022 05:29:43 PM 
+12/22/2022 05:29:43 PM Bad Epoch. Total num bad epoch: 8
+12/22/2022 05:29:43 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:29:53 PM Epoch 19 - iter 4/51 - 10% Avg loss 1.10582
+12/22/2022 05:30:03 PM Epoch 19 - iter 9/51 - 10% Avg loss 1.12310
+12/22/2022 05:30:14 PM Epoch 19 - iter 14/51 - 10% Avg loss 1.14627
+12/22/2022 05:30:24 PM Epoch 19 - iter 19/51 - 10% Avg loss 1.12916
+12/22/2022 05:30:34 PM Epoch 19 - iter 24/51 - 10% Avg loss 1.17257
+12/22/2022 05:30:44 PM Epoch 19 - iter 29/51 - 10% Avg loss 1.16363
+12/22/2022 05:30:54 PM Epoch 19 - iter 34/51 - 10% Avg loss 1.17732
+12/22/2022 05:31:04 PM Epoch 19 - iter 39/51 - 10% Avg loss 1.18462
+12/22/2022 05:31:15 PM Epoch 19 - iter 44/51 - 10% Avg loss 1.19642
+12/22/2022 05:31:25 PM Epoch 19 - iter 49/51 - 10% Avg loss 1.19609
+12/22/2022 05:31:26 PM Epoch #19: Epoch Average Loss 1.16020 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:31:27 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:32:25 PM Eval Devset: Epoch #19: Average Loss 2.95370 - BLEU-1: 0.61764 - BLEU-2: 0.41931 - BLEU-3: 0.28126 - BLEU-4: 0.19126 - ROUGE_L: 0.51347 - METEOR: 0.34392 - CIDEr: 0.31940 - SPICE: 0.00000 - Epoch Testing Time: 0.97 min(s)
+12/22/2022 05:32:25 PM 
+12/22/2022 05:32:25 PM Bad Epoch. Total num bad epoch: 9
+12/22/2022 05:32:25 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:32:35 PM Epoch 20 - iter 4/51 - 10% Avg loss 1.03416
+12/22/2022 05:32:46 PM Epoch 20 - iter 9/51 - 10% Avg loss 1.03593
+12/22/2022 05:32:56 PM Epoch 20 - iter 14/51 - 10% Avg loss 1.05305
+12/22/2022 05:33:06 PM Epoch 20 - iter 19/51 - 10% Avg loss 1.06707
+12/22/2022 05:33:16 PM Epoch 20 - iter 24/51 - 10% Avg loss 1.09263
+12/22/2022 05:33:26 PM Epoch 20 - iter 29/51 - 10% Avg loss 1.06712
+12/22/2022 05:33:37 PM Epoch 20 - iter 34/51 - 10% Avg loss 1.09303
+12/22/2022 05:33:47 PM Epoch 20 - iter 39/51 - 10% Avg loss 1.09836
+12/22/2022 05:33:57 PM Epoch 20 - iter 44/51 - 10% Avg loss 1.09035
+12/22/2022 05:34:07 PM Epoch 20 - iter 49/51 - 10% Avg loss 1.12006
+12/22/2022 05:34:08 PM Epoch #20: Epoch Average Loss 1.07615 - Epoch Training Time: 1.7 min(s)
+12/22/2022 05:34:09 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:35:06 PM Eval Devset: Epoch #20: Average Loss 2.99041 - BLEU-1: 0.62062 - BLEU-2: 0.42063 - BLEU-3: 0.28496 - BLEU-4: 0.19503 - ROUGE_L: 0.51252 - METEOR: 0.34569 - CIDEr: 0.31141 - SPICE: 0.00000 - Epoch Testing Time: 0.95 min(s)
+12/22/2022 05:35:06 PM 
+12/22/2022 05:35:06 PM Bad Epoch. Total num bad epoch: 10
+12/22/2022 05:35:06 PM ----------------------------------------------------------------------------------------------------
+12/22/2022 05:35:06 PM Exiting from training early. Best model score: 0.2037. Saving final model: True 
+12/22/2022 05:35:06 PM Saving model ...
+12/22/2022 05:35:07 PM Done.
+12/22/2022 05:36:05 PM Test Testset: Epoch #20: Average Loss 2.78190 - BLEU-1: 0.64463 - BLEU-2: 0.43684 - BLEU-3: 0.29436 - BLEU-4: 0.20348 - ROUGE_L: 0.51561 - METEOR: 0.34739 - CIDEr: 0.32991 - SPICE: 0.00000 - Epoch Testing Time: 0.96 min(s)
