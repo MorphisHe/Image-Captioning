@@ -5,7 +5,7 @@
 pip3 install -r requirements.txt
 git clone https://github.com/asyml/texar-pytorch.git 
 cd texar-pytorch
-!pip install -e .
+pip install -e .
 cd ..
 ```
 
