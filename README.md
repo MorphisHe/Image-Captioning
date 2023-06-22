@@ -54,4 +54,4 @@ python3 plot_loss.py
 
 
 ### Metric
-![metric](image-captioning-metirc.png)
+![metric](image-captioning-metric.png)
