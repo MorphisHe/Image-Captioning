@@ -1,4 +1,5 @@
-# DL-ImageCaptioning
+# ImageCaptioning (Nerual Architecture Search)
+The repository contain the code that was used to perform nerual architecture search on Flickr8k dataset
 
 ### Set up enviornment
 ```bash
@@ -50,3 +51,7 @@ python3 plot_loss.py
 
 ### Training Log:
 `training_logs` stores all model training logs. Since model checkpoint is too large, we can't push them to github repo. However training log shows loss and set of metric for training the model. Each log file is named with the architecture used for that particular training. Ex: VIT-LSTM-BEAM3 uses ViT encoder and LSTM decoder with Beam Search and Beam Size of 3.
+
+
+### Metric
+![metric](image-captioning-metirc.png)
